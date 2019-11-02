@@ -1,0 +1,105 @@
+.imagebackgroundPCB {
+  background-image: url("../Pictures/PCB.jpg");
+  background-repeat: no-repeat, repeat;
+  background-size: auto 100%;
+}
+
+.imagebackgroundStudie {
+  background-image: url("../Pictures/formel.jpg");
+  background-repeat: no-repeat, repeat;
+  background-size: auto 100%;
+}
+
+.imagebackgroundSonstiges {
+  background-image: url("../Pictures/formel2.jpg");
+  background-repeat: no-repeat, repeat;
+  background-size: auto 100%;
+}
+
+.imagePosition {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: auto;
+  margin-bottom: auto;
+  background-image: url("../Pictures/detectposition.png");
+  background-repeat: no-repeat, repeat;
+  background-size: 100% 100%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: "center";
+  border-radius: 18px;
+  border: 2px solid white;
+  min-height: 110px;
+}
+
+.imageAnalyse {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: auto;
+  margin-bottom: auto;
+  background-image: url("../Pictures/datenanalyse.png");
+  background-repeat: no-repeat, repeat;
+  background-size: 100% 100%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: "center";
+  border-radius: 18px;
+  border: 2px solid white;
+  min-height: 110px;
+}
+
+.mmborder {
+  /*margin-top: auto;*/
+  /*margin-bottom: auto;*/
+  margin-left: auto;
+  margin-right: auto;
+  text-align: "center";
+  background-color: black;
+  color: white;
+  border-radius: 18px;
+  border: 2px solid white;
+}
+
+.lineV {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: auto;
+  margin-bottom: auto;
+  height: 2px;
+  width: 100%;
+  background-color: white;
+}
+
+.lineH {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: auto;
+  margin-bottom: auto;
+  height: 200%;
+  width: 2px;
+  background-color: white;
+  opacity: 1;
+}
+
+.textnotizH {
+  color: lightgray;
+  margin-left: 4px;
+}
+
+.textnotizV {
+  color: lightgray;
+  margin-left: -12px;
+}
+
+.textbox {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: auto;
+  margin-bottom: auto;
+  font-size: large;
+  text-align: center;
+}
+
+.backgroundtransparent {
+  background-color: grey;
+}

@@ -1,0 +1,7 @@
+.carousel .thumb img {
+  height: 100% !important;
+}
+
+.carousel .slide img {
+  max-height: 450px; /* change this to whatever you want */
+}

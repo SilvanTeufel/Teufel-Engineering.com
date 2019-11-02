@@ -1,0 +1,57 @@
+{
+  "name": "teufel-engineering.com",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@types/bootstrap": "^4.3.1",
+    "@types/jest": "24.0.19",
+    "@types/node": "12.11.1",
+    "@types/react-dom": "16.9.2",
+    "@types/react-helmet": "^5.0.12",
+    "@types/react-modal": "^3.10.0",
+    "@types/react-router-dom": "^5.1.0",
+    "@types/react-scroll": "^1.5.4",
+    "@types/reactstrap": "^8.0.5",
+    "bootstrap": "^4.3.1",
+    "detect-browser": "^4.7.0",
+    "emailjs": "^2.2.0",
+    "express": "^4.17.1",
+    "react": "^16.10.2",
+    "react-coverflow": "^0.2.20",
+    "react-dom": "^16.10.2",
+    "react-fittext": "^1.0.0",
+    "react-helmet": "^5.2.1",
+    "react-modal": "^3.10.1",
+    "react-responsive-carousel": "^3.1.50",
+    "react-router-dom": "^5.1.2",
+    "react-scripts": "3.2.0",
+    "react-scroll": "^1.7.14",
+    "reactstrap": "^8.1.1",
+    "typescript": "3.6.4",
+    "webfontloader": "^1.6.28"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@types/react": "^16.9.9"
+  }
+}
