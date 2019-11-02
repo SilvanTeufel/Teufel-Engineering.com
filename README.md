@@ -1,5 +1,5 @@
 ﻿﻿# Teufel-Engineering
 
-www.teufel-engineering.com - Please take a look
+WWW.TEUFEL-ENGINEERING.COM - Please take a look
 
-written with create-react-app
+*written with create-react-app*
