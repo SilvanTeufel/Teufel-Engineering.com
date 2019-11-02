@@ -234,7 +234,7 @@ class Router extends React.Component<{}, MyComponentState> {
     if (this.state && this.state.routerstructure){
       header.push(
         <div className="row align-items-center text-left header">
-          <div className="col-md-1 col-3 align-items-center">
+          <div className="col-md-2 col-3 align-items-center">
               <RouterDropdownField
                 buttons={this.createScrollButtonArray()}
                 toggleDropDown={() => this.toggleDropDown()}
@@ -245,13 +245,11 @@ class Router extends React.Component<{}, MyComponentState> {
           <div className="col-md-2 col-1 d-none d-md-block" />
           <div className="col-md-1 col-3 text-left">
             <img src={LogoImage} alt="" className="rounded float-left" style={{ opacity: 0.8, maxHeight: 100 }} />
-          </div>    
-            <div className="col-md-5 col-3 text-left">
-              
-            <h2>Teufel Engineering</h2>
-            <h6 className="d-none d-md-block">Silvan Teufel - Master of Science</h6>
-            
           </div>
+            <div className="col-md-5 col-3 text-left">
+              <h2>Teufel Engineering</h2>
+              <h6 className="d-none d-md-block">Silvan Teufel - Master of Science</h6>
+            </div>
           <div className="col-md-3 col-1" />
         </div>
       );
