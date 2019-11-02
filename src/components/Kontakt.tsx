@@ -207,6 +207,11 @@ class Kontakt extends React.Component<{}, MyComponentStates> {
               <br />
               Tel.: 01605170640
               <br />
+              <br />
+              <a href={'https://github.com/SilvanTeufel'} style={{color: 'black'}}>
+              https://github.com/SilvanTeufel
+              </a>
+              <br />
             </p>
           </div>
           <div className="col-md-4 col-0" />
