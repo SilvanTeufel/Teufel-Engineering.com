@@ -2,7 +2,7 @@ import * as React from 'react';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import '../css/Carousel.css';
 import '../css/MindMap.css';
-
+import '../css/Cursor.css';
 
 class Study extends React.Component<{}, {}> {
 
@@ -15,9 +15,7 @@ class Study extends React.Component<{}, {}> {
             <div className="col-md col-1" />
             <div className="col text-center">
               <br />
-              <h3>Studien und Datenanalyse</h3>
-              <br />
-              <br />
+              <h3 className="cursor-pointer">Studien und Datenanalyse</h3>
               <br />
             </div>
             <div className="col-md col-1" />

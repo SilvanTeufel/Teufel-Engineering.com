@@ -1,7 +1,8 @@
 import * as React from 'react';
 import { projects } from '../Daten';
-import Projekt from './Project';
+import Project from './Project';
 import '../css/Fade.css';
+import '../css/Cursor.css';
 var classNames = require('classnames');
 
 interface MyComponentProps {
@@ -51,18 +52,11 @@ class ProjectTabs extends React.Component<MyComponentProps, MyComponentStates> {
 
   togglenavlinkto = (key: string) => {
     const navlink = this.state.navlink;
-
     for (var Key in this.state.navlink) {
       if (this.state.navlink.hasOwnProperty(Key) && Key !== key) {
         navlink[Key] = false;
       } else {
         navlink[key] = true;
-      }
-      for (let i = 0; i < projects.length; i++){
-
-        if (projects[i].key === key){
-        this.getTabledata(projects[i].title, projects[i]);
-        }
       }
     }
 
@@ -70,16 +64,6 @@ class ProjectTabs extends React.Component<MyComponentProps, MyComponentStates> {
     this.setState({ navlink });
   };
 
-  getPorjectTitles = () => {
-
-
-
-    for (let i = 0; i < projects.length; i++) {
-      if (projects[i].key){
-
-      } 
-    }
-  }
 
 
   toggleViaNavbar = () =>{
@@ -119,32 +103,21 @@ class ProjectTabs extends React.Component<MyComponentProps, MyComponentStates> {
   };
 
 
-  getTabledata = (title: string, data: any) => {
-    this.setState({ Projecttitle: title, dataForModal: data });
-  };
-
-  toggleSingleProject = () => {
-    this.setState({ showProject: !this.state.showProject });
-  };
-
   createSingleProject = () => {
     const project = [];
 
-    if (this.state.dataForModal){
-      project.push(
-        <div className={classNames({ fadein: this.state.dataForModal })}>
-         <Projekt Data={this.state.dataForModal} />
-        </div>
-      );
-    } 
+      console.log(projects);
+    for (var k in projects) {
+      var projectsV: any = projects;
 
-    project.push(
-      <div className="row text-left align-items-center">
-        <div className="col ">
-          <br />
-        </div>
-      </div>
-    );
+        project.push(
+          <div className={classNames({ fadein: this.state.navlink[k], 'd-none': !this.state.navlink[k]})}>
+            <Project Data={projectsV[k]} />
+          </div>
+        );
+      
+    }
+
 
     return project;
   };
@@ -156,11 +129,13 @@ class ProjectTabs extends React.Component<MyComponentProps, MyComponentStates> {
 
       const k = key
       links.push(
-        <li className="nav-item" onClick={() => this.togglenavlinkto(k)}>
+
+        <li className="nav-item cursor-pointer" onClick={() => this.togglenavlinkto(k)}>
           <div className={classNames({ 'nav-link': true, active: this.state.navlink[k] })}>
-            <p className="h6">{k}</p>
-        </div>
-      </li>
+            <p className="h6" >{k}</p>
+          </div>
+        </li>
+
       );
     }
     return links

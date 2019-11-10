@@ -3,6 +3,7 @@ import { vistenkarteHinten, vistenkarteVorne } from '../Daten';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import '../css/Carousel.css';
 import '../css/MindMap.css';
+import '../css/Cursor.css';
 
 
 class Further extends React.Component<{}, {}> {
@@ -72,9 +73,15 @@ class Further extends React.Component<{}, {}> {
     sonstiges.push(
       <div className="row">
         <div className="col">
-          <br />
-          <br />
-          <br />
+          <div className="row">
+            <div className="col-md col-1" />
+            <div className="col text-center" style={{ marginBottom: '2%' }}>
+              <br />
+              <h3 className="cursor-pointer">Sonstiges</h3>
+              <br />
+            </div>
+            <div className="col-md col-1" />
+          </div>
           <div className="row">
             <div className="col-2" />
             <div className="col-8 mmborder">{this.createCarouselText1()}</div>
@@ -82,17 +89,11 @@ class Further extends React.Component<{}, {}> {
           </div>
           <br />
           <br />
-          <br />
-          <br />
-          <br />
           <div className="row">
             <div className="col-2" />
             <div className="col-8 mmborder">{this.createCarouselText2()}</div>
             <div className="col-2" />
           </div>
-          <br />
-          <br />
-          <br />
           <br />
           <br />
           <div className="row">

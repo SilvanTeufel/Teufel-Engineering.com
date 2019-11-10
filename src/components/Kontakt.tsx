@@ -196,7 +196,7 @@ class Kontakt extends React.Component<{}, MyComponentStates> {
         <div className="row text-left align-items-center">
           <div className="col-md-1 col-0" />
           <div className="col-md-3 col-12">
-            <p>
+            <p className="cursor-pointer-invert">
               Silvan Teufel
               <br />
               77815 Bühl

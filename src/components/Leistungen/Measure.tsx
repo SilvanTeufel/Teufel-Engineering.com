@@ -2,7 +2,7 @@ import * as React from 'react';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import '../css/Carousel.css';
 import '../css/MindMap.css';
-
+import '../css/Cursor.css';
 
 class Measure extends React.Component<{}, {}> {
 
@@ -15,7 +15,7 @@ class Measure extends React.Component<{}, {}> {
             <div className="col-md col-1" />
             <div className="col text-center">
               <br />
-              <h3>Aufbau von Messsystemen</h3>
+              <h3 className="cursor-pointer">Aufbau von Messsystemen</h3>
               <br />
             </div>
             <div className="col-md col-1" />
@@ -132,7 +132,7 @@ class Measure extends React.Component<{}, {}> {
             <div className="col-md col-1" />
 
             <div className="col">
-              <p className="textnotiz">Javascript/ExpressJS</p>
+              <p className="textnotizH">Javascript/ExpressJS</p>
             </div>
             <div className="col" />
             <div className="col" />

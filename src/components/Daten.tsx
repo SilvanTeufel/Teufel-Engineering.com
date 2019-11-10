@@ -1,7 +1,7 @@
-export const projects = [
+export const projects = {
+  Mikrocontroller:
   {
     id: 10,
-    key: 'Mikrocontroller',
     title: 'Embedded/IoT-System für Zugangskontrollen',
     date: '11/2018 – dato',
     company: 'Gallenschütz GmbH',
@@ -12,9 +12,9 @@ export const projects = [
     ],
     imagepath: './Pictures/KVblue.jpg'
   },
+  SQL:
   {
     id: 9,
-    key: 'SQL',
     title: 'Entwicklung einer Webapp (ReactJS) mit PHP-API und SQL-Datenbank',
     date: '11/2018 – dato',
     company: 'IT-Consulting Unternehmen',
@@ -24,9 +24,9 @@ export const projects = [
     ],
     imagepath: './Pictures/PROG.png'
   },
+  'E-Bike':
   {
     id: 8,
-    key: 'E-Bike',
     title: 'Entwicklung eines Moduls zur "Anfahrtsregelung" bei E-Bikes',
     date: '10/2018 – dato',
     company: 'R & E Stricker Reha-Entwicklungen GmbH',
@@ -37,9 +37,9 @@ export const projects = [
     ],
     imagepath: './Pictures/BIKE.jpg'
   },
+  Typescript:
   {
     id: 7,
-    key: 'Typescript',
     title: 'Programmierung einer Webapplikation mit Datenbankanbindung',
     date: '10/2018 – 12/2018',
     company: '-',
@@ -50,9 +50,9 @@ export const projects = [
     ],
     imagepath: './Pictures/PROG.jpg'
   },
+  React:
   {
     id: 6,
-    key: 'React',
     title: 'Datenbank für Bestellungen und Produktionserfassung',
     date: '07/2018 – 10/2018',
     company: 'Elektronik- und IT-Consulting Unternehmen',
@@ -65,9 +65,9 @@ export const projects = [
     ],
     imagepath: './Pictures/DATABASEb.jpg'
   },
+  Sensorik:
   {
     id: 5,
-    key: 'Sensorik',
     title: 'Studie zum Sensorvergleich magnetischer Sensoren',
     date: '04/2018 – 09/2018',
     company: '-',
@@ -80,9 +80,9 @@ export const projects = [
     ],
     imagepath: './Pictures/OSZI.jpg'
   },
+  Temperatur:
   {
     id: 4,
-    key: 'Temperatur',
     title: 'Prototyp für Temperaturmesssystem',
     date: '01/2018 – 04/2018',
     company: '-',
@@ -95,9 +95,9 @@ export const projects = [
     ],
     imagepath: './Pictures/THERMO.jpg'
   },
+  Masterthesis:
   {
     id: 3,
-    key: 'Masterthesis',
     title: 'Masterthesis - Analyse und Vergleich der Charakteristiken von Stromsensoren',
     date: '05/2017 – 12/2017',
     company: 'Automobil-Zulieferer',
@@ -111,9 +111,9 @@ export const projects = [
     ],
     imagepath: './Pictures/AUTO.jpg'
   },
+  Spektroskopie:
   {
     id: 2,
-    key: 'Spektroskopie',
     title: 'Impedanzspektroskopie an Metalloxid-Gassensoren',
     date: '09/2016 – 05/2017',
     company: 'Hochschule, Karlsruhe',
@@ -126,9 +126,9 @@ export const projects = [
     ],
     imagepath: './Pictures/NOTIZ.jpg'
   },
+  Bachelorthesis:
   {
     id: 1,
-    key: 'Bachelorthesis',
     title: 'Bachelorthesis - Untersuchung und Charakterisierung von SnO2-Schichten unter Zugabe von Cer',
     date: '11/2015 – 05/2016',
     company: 'Hochschule, Karlsruhe',
@@ -139,9 +139,9 @@ export const projects = [
     ],
     imagepath: './Pictures/GAS.jpg'
   },
+  Studium:
   {
     id: 0,
-    key: 'Studium',
     title: 'Praxissemester - Temperaturmessungen zur EX-Sicherheit',
     date: '09/2014 – 02/2015)',
     company: 'Elektronikentwicklungs- und Vertriebsunternehmen',
@@ -151,7 +151,7 @@ export const projects = [
     ],
     imagepath: './Pictures/EX.png'
   }
-];
+};
 
 export const vistenkarteVorne = [
   {

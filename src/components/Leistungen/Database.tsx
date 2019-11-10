@@ -2,7 +2,7 @@ import * as React from 'react';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import '../css/Carousel.css';
 import '../css/MindMap.css';
-
+import '../css/Cursor.css';
 
 class Database extends React.Component<{}, {}> {
 
@@ -13,9 +13,10 @@ class Database extends React.Component<{}, {}> {
         <div className="col">
           <div className="row">
             <div className="col-md col-1" />
-            <div className="col text-center">
+            <div className="col text-center" style={{marginBottom: '2%'}}>
               <br />
-              <h3>Aufbau von spezifischen, browserbasierten Datenbanken</h3>
+              <h3 className="cursor-pointer">Aufbau von spezifischen, browserbasierten Datenbanken</h3>
+              <br />
               <br />
             </div>
             <div className="col-md col-1" />
@@ -37,7 +38,9 @@ class Database extends React.Component<{}, {}> {
 
             <div className="col ">
               <div className="lineH">
+                <br/>
                 <p className="textnotizH">Ethernet/Internet</p>
+                <br />
               </div>
             </div>
             <div className="col" />
@@ -67,7 +70,9 @@ class Database extends React.Component<{}, {}> {
 
             <div className="col ">
               <div className="lineH">
+                <br />
                 <p className="textnotizH">Ethernet/Internet/Lokal</p>
+                <br />
               </div>
             </div>
             <div className="col" />

@@ -6,7 +6,8 @@ import Further from './Further';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import '../css/Carousel.css';
 import '../css/MindMap.css';
-import { Collapse } from 'reactstrap';
+import '../css/Fade.css';
+import '../css/Cursor.css';
 var classNames = require('classnames');
 
 interface MyComponentStates {
@@ -79,18 +80,18 @@ class Leistungen extends React.Component<MyComponentProps, MyComponentStates> {
 
    tab.push(
     <div>
-       <Collapse isOpen={this.state.navlink.Messsysteme}>
+       <div className={classNames({ fadein: this.state.navlink.Messsysteme, 'd-none': !this.state.navlink.Messsysteme })}>
          {<Measure/>}
-       </Collapse >
-       <Collapse isOpen={this.state.navlink.Studien}>
+       </div>
+       <div className={classNames({ fadein: this.state.navlink.Studien, 'd-none': !this.state.navlink.Studien })}>
          {<Study/>}
-       </Collapse >
-       <Collapse isOpen={this.state.navlink.Datenbanken}>
+       </div>
+       <div className={classNames({ fadein: this.state.navlink.Datenbanken, 'd-none': !this.state.navlink.Datenbanken })}>
          {<Database/>}
-       </Collapse >
-       <Collapse isOpen={this.state.navlink.Sonstiges}>
+       </div>
+       <div className={classNames({ fadein: this.state.navlink.Sonstiges, 'd-none': !this.state.navlink.Sonstiges })}>
          {<Further/>}
-       </Collapse >
+       </div>
     </div>
    )
 
@@ -112,13 +113,13 @@ class Leistungen extends React.Component<MyComponentProps, MyComponentStates> {
           <div className="row">
             <div className="col">
               <ul className="nav nav-tabs">
-            <li className="nav-item" onClick={() => this.togglenavlinkto('Messsysteme')}>
+                <li className="nav-item cursor-pointer" onClick={() => this.togglenavlinkto('Messsysteme')}>
                   <div className={classNames({ 'nav-link': true, active: this.state.navlink.Messsysteme })}>
                 Messsysteme
               </div>
             </li>
 
-            <li className="nav-item" onClick={() => this.togglenavlinkto('Studien')}>
+                <li className="nav-item cursor-pointer" onClick={() => this.togglenavlinkto('Studien')}>
               <div
                     className={classNames({ 'nav-link': true, active: this.state.navlink.Studien })}
                 
@@ -126,7 +127,7 @@ class Leistungen extends React.Component<MyComponentProps, MyComponentStates> {
                 Studien
                           </div>
             </li>
-                <li className="nav-item" onClick={() => this.togglenavlinkto('Datenbanken')}>
+                <li className="nav-item cursor-pointer" onClick={() => this.togglenavlinkto('Datenbanken')}>
                   <div
                     className={classNames({ 'nav-link': true, active: this.state.navlink.Datenbanken })}
 
@@ -134,7 +135,7 @@ class Leistungen extends React.Component<MyComponentProps, MyComponentStates> {
                     Datenbanken
                           </div>
                 </li>
-            <li className="nav-item" onClick={() => this.togglenavlinkto('Sonstiges')}>
+                <li className="nav-item cursor-pointer" onClick={() => this.togglenavlinkto('Sonstiges')}>
                   <div className={classNames({ 'nav-link': true, active: this.state.navlink.Sonstiges })}>
                 Sonstiges
                           </div>

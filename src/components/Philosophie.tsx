@@ -21,7 +21,7 @@ class Philosophie extends React.Component<{}, {}> {
         <div className="row">
           <div className="col-md-3 col-1 " />
           <div className="col-md col-10 text-left">
-            <h6>
+            <h6 className="cursor-pointer-invert">
               Als freiberuflicher Entwickler habe ich Herausforderungen niemals gescheut, weshalb ich, sowohl im
               Hardwarebereich (Entwerfen von Platinen, Filtern, Messdatenanalyse, usw.) als auch im Softwarebereich
               (Programmieren von Mikrocontrollern), bis hin zur Entwicklung von Datenbanksystemen mit modernen

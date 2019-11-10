@@ -5,7 +5,9 @@ import Kontaktformular from './Kontakt';
 import Philosophie from './Philosophie';
 import ProjectTabs from './Projects/ProjectTabs';
 import './css/box.css';
+import './css/Cursor.css';
 const LogoImage = require('./Pictures/LogoINV1.png');
+
 
 interface MyComponentStates {}
 
@@ -50,8 +52,8 @@ class Home extends React.Component<MyComponentProps, MyComponentStates> {
                   <div className="col-md-1 col-3">
                     <img src={LogoImage} alt="" className="rounded float-left" style={{ opacity: 0.8, maxHeight: 65 }} />
                   </div>
-                  <div className=" col-md-11 col-9">
-                    <h3>{'Philosophie'}</h3>
+                  <div className="col-md-11 col-9">
+                    <h3 className="cursor-pointer">{'Philosophie'}</h3>
                   </div>
                 </div>
                 <div className="row align-items-center">
@@ -64,14 +66,14 @@ class Home extends React.Component<MyComponentProps, MyComponentStates> {
           </Element>
 
           <Element name="Leistungen" className="element" id="E1">
-            <div className="row boxkit-mid">
+            <div className="row boxkit-mid-leistungen">
               <div className="col">
                 <div className="row text-left align-items-center">
                   <div className="col-md-1 col-3">
                     <img src={LogoImage} alt="" className="rounded float-left" style={{ opacity: 0.8, maxHeight: 65 }} />
                   </div>
                   <div className=" col-md-11 col-9">
-                    <h3>{'Leistungen'}</h3>
+                    <h3 className="cursor-pointer">{'Leistungen'}</h3>
                   </div>
                 </div>
                 <div className="row text-center">
@@ -84,14 +86,14 @@ class Home extends React.Component<MyComponentProps, MyComponentStates> {
           </Element>
 
           <Element name="Projekte" className="element" id="E2">
-            <div className="row boxkit-mid">
+            <div className="row boxkit-mid-projekte">
               <div className="col">
                 <div className="row text-left align-items-center">
                   <div className="col-md-1 col-3">
                     <img src={LogoImage} alt="" className="rounded float-left" style={{ opacity: 0.8, maxHeight: 65 }} />
                   </div>
                   <div className=" col-md-11 col-9">
-                    <h3>{'Projekte'}</h3>
+                    <h3 className="cursor-pointer">{'Projekte'}</h3>
                   </div>
                 </div>
                 <div className="row text-center">
@@ -111,7 +113,7 @@ class Home extends React.Component<MyComponentProps, MyComponentStates> {
                     <img src={LogoImage} alt="" className="rounded float-left" style={{ opacity: 0.8, maxHeight: 65 }} />
                   </div>
                   <div className=" col-md-11 col-9">
-                    <h3>{'Kontakt'}</h3>
+                    <h3 className="cursor-pointer">{'Kontakt'}</h3>
                   </div>
                 </div>
                 <div className="row text-center">

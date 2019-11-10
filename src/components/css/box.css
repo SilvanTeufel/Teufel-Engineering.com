@@ -30,7 +30,7 @@
   margin-bottom: 10vh;
 }
 
-.boxkit-mid {
+.boxkit-mid-leistungen {
   -webkit-box-shadow: 17px 16px 4px -7px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 17px 16px 4px -7px rgba(0, 0, 0, 0.75);
   box-shadow: 17px 16px 4px -7px rgba(0, 0, 0, 0.75);
@@ -39,6 +39,19 @@
   color: black;
   margin-top: 10vh;
   margin-bottom: 10vh;
+  min-height: 100vh;
+}
+
+.boxkit-mid-projekte {
+  -webkit-box-shadow: 17px 16px 4px -7px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 17px 16px 4px -7px rgba(0, 0, 0, 0.75);
+  box-shadow: 17px 16px 4px -7px rgba(0, 0, 0, 0.75);
+  border-radius: 20px;
+  background-color: rgb(128, 128, 128, 0.95);
+  color: black;
+  margin-top: 10vh;
+  margin-bottom: 10vh;
+  min-height: 80vh;
 }
 
 .boxkit-last {

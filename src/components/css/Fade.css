@@ -1,66 +1,63 @@
 .fadein {
-    margin-top: 25px;
-    font-size: 21px;
-    text-align: center;
+  margin-top: 25px;
+  font-size: 21px;
+  text-align: center;
 
-    -webkit-animation: fadein 3s; /* Safari, Chrome and Opera > 12.1 */ /* Firefox < 16 */ /* Internet Explorer */ /* Opera < 12.1 */
-            animation: fadein 3s;
+  -webkit-animation: fadein 3s; /* Safari, Chrome and Opera > 12.1 */ /* Firefox < 16 */ /* Internet Explorer */ /* Opera < 12.1 */
+  animation: fadein 3s;
 }
 
 @keyframes fadein {
-    from { opacity: 0; }
-    to   { opacity: 1; }
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 /* Firefox < 16 */
 
 /* Safari, Chrome and Opera > 12.1 */
 @-webkit-keyframes fadein {
-    from { opacity: 0; }
-    to   { opacity: 1; }
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 /* Internet Explorer */
 
 /* Opera < 12.1 */
-
+/* Not used atm */
 .fadeout {
-    margin-top: 25px;
-    font-size: 21px;
-    text-align: center;
+  margin-top: 25px;
+  font-size: 21px;
+  text-align: center;
 
-    -webkit-animation: fadeout 3s; /* Safari, Chrome and Opera > 12.1 */ /* Firefox < 16 */ /* Internet Explorer */ /* Opera < 12.1 */
-            animation: fadeout 3s;
+  -webkit-animation: fadeout 3s forwards; /* Safari, Chrome and Opera > 12.1 */ /* Firefox < 16 */ /* Internet Explorer */ /* Opera < 12.1 */
+  animation: fadeout 3s forwards;
 }
 
 @keyframes fadeout {
-    from { opacity: 1; }
-    to   { opacity: 0; }
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
 }
 
 /* Firefox < 16 */
 
 /* Safari, Chrome and Opera > 12.1 */
 @-webkit-keyframes fadeout {
-    from { opacity: 1; }
-    to   { opacity: 0; }
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
 }
-
-/* Internet Explorer */
-
-/* Opera < 12.1 */
- 
- /*
- .fade {
-    animation-name            : fade2 ;
-    animation-duration        : 3s ;
-    animation-iteration-count : 1 ;
-    animation-direction       : alternate;
- }
- 
- @keyframes fade2 {
-    from { opacity   : 0; }
-    to   { opacity   : 1; }
- }*/
-
-

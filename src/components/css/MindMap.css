@@ -32,6 +32,11 @@
   min-height: 110px;
 }
 
+.imagePosition:hover {
+  filter: invert(100%);
+  cursor: pointer;
+}
+
 .imageAnalyse {
   margin-left: auto;
   margin-right: auto;
@@ -48,6 +53,11 @@
   min-height: 110px;
 }
 
+.imageAnalyse:hover {
+  filter: invert(100%);
+  cursor: pointer;
+}
+
 .mmborder {
   /*margin-top: auto;*/
   /*margin-bottom: auto;*/
@@ -58,6 +68,12 @@
   color: white;
   border-radius: 18px;
   border: 2px solid white;
+}
+
+.mmborder:hover {
+  color: lightblue;
+  cursor: pointer;
+  border: 2px solid lightblue;
 }
 
 .lineV {
@@ -86,9 +102,19 @@
   margin-left: 4px;
 }
 
+.textnotizH:hover {
+  color: lightblue;
+  cursor: pointer;
+}
+
 .textnotizV {
   color: lightgray;
   margin-left: -12px;
+}
+
+.textnotizV:hover {
+  color: lightblue;
+  cursor: pointer;
 }
 
 .textbox {
@@ -98,6 +124,12 @@
   margin-bottom: auto;
   font-size: large;
   text-align: center;
+}
+
+.textbox:hover {
+  color: lightblue;
+  cursor: pointer;
+  border: lightblue;
 }
 
 .backgroundtransparent {

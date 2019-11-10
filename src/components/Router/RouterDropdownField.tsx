@@ -61,16 +61,25 @@ class RouterDropdownField extends React.Component<MyComponentProps, MyComponentS
     //const menuClass = `dropdown-menu${this.props.DropdownisOpen ? ' show' : ''}`;
     row.push(
       <div className="dropdown">
-        <div className="row align-items-center" onClick={this.props.toggleDropDown}>
-          <div className="col-md-1 col-4 align-items-right">
-          <img
-          src={toggleLine}
-          alt=""
-            className={classNames({ "rounded float-left": true, rotatebuttonlogo: false })}
-          style={{ height: 100, width: 23 }}
-          onClick={this.props.toggleDropDown}
-        /></div>
-        <div className="col-md-1 col-4">
+        <div className="row align-items-center text-right" onClick={this.props.toggleDropDown}>
+          <div className="col-md-1 col-4">
+            <div className="row">
+              <div className="col">
+                <i className="fas fa-arrow-right" style={{ marginLeft: '1vh' }}></i>
+              </div>
+            </div>
+            <div className="row">
+              <div className="col">
+                <i className="fas fa-arrow-right" style={{ marginLeft: '1vh' }}></i>
+              </div>
+            </div>
+            <div className="row">
+              <div className="col">
+                <i className="fas fa-arrow-right" style={{ marginLeft: '1vh' }}></i>
+              </div>
+            </div>
+          </div>
+          <div className="col-md-1 col-4">
           <div className="row">
             <div className="col">
             <img
@@ -106,13 +115,21 @@ class RouterDropdownField extends React.Component<MyComponentProps, MyComponentS
           </div>
       </div>
           <div className="col-md-1 col-4">
-          <img
-            src={toggleLine}
-            alt=""
-            className={classNames({ "rounded float-left": true, rotatebuttonlogo: false })}
-            style={{ height: 100, width: 23 }}
-            onClick={this.props.toggleDropDown}
-          />
+            <div className="row">
+              <div className="col">
+                <i className="fas fa-arrow-left"></i>
+              </div>
+            </div>
+            <div className="row">
+              <div className="col">
+                <i className="fas fa-arrow-left"></i>
+              </div>
+            </div>
+            <div className="row">
+              <div className="col">
+                <i className="fas fa-arrow-left"></i>
+              </div>
+            </div>
           </div>
         </div>
         <div
