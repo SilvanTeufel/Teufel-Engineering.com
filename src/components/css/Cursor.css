@@ -1,0 +1,21 @@
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.nav-item {
+  border-bottom: 1px solid white;
+}
+
+.nav {
+  border-bottom: 1px solid white;
+}
+
+.cursor-pointer-lightblue:hover {
+  cursor: pointer;
+  color: lightblue;
+}
+
+.cursor-pointer-invert:hover {
+  cursor: pointer;
+  filter: invert(100%);
+}
