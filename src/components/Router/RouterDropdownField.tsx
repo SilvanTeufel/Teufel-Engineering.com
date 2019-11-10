@@ -65,17 +65,17 @@ class RouterDropdownField extends React.Component<MyComponentProps, MyComponentS
           <div className="col-md-1 col-4">
             <div className="row">
               <div className="col">
-                <i className="fas fa-arrow-right" style={{ marginLeft: '1vh' }}></i>
+                <i className={classNames({ "fas fa-arrow-right": true, rotatelefticondown: this.props.DropdownisOpen, rotatelefticonright: !this.props.DropdownisOpen })} style={{ marginLeft: '1vh' }}></i>
               </div>
             </div>
             <div className="row">
               <div className="col">
-                <i className="fas fa-arrow-right" style={{ marginLeft: '1vh' }}></i>
+                <i className={classNames({ "fas fa-arrow-right": true, rotatelefticondown: this.props.DropdownisOpen, rotatelefticonright: !this.props.DropdownisOpen })} style={{ marginLeft: '1vh' }}></i>
               </div>
             </div>
             <div className="row">
               <div className="col">
-                <i className="fas fa-arrow-right" style={{ marginLeft: '1vh' }}></i>
+                <i className={classNames({ "fas fa-arrow-right": true, rotatelefticondown: this.props.DropdownisOpen, rotatelefticonright: !this.props.DropdownisOpen })} style={{ marginLeft: '1vh' }}></i>
               </div>
             </div>
           </div>
@@ -117,17 +117,17 @@ class RouterDropdownField extends React.Component<MyComponentProps, MyComponentS
           <div className="col-md-1 col-4">
             <div className="row">
               <div className="col">
-                <i className="fas fa-arrow-left"></i>
+                <i className={classNames({ "fas fa-arrow-left": true, rotaterighticondown: this.props.DropdownisOpen, rotaterighticonleft: !this.props.DropdownisOpen })}></i>
               </div>
             </div>
             <div className="row">
               <div className="col">
-                <i className="fas fa-arrow-left"></i>
+                <i className={classNames({ "fas fa-arrow-left": true, rotaterighticondown: this.props.DropdownisOpen, rotaterighticonleft: !this.props.DropdownisOpen })}></i>
               </div>
             </div>
             <div className="row">
               <div className="col">
-                <i className="fas fa-arrow-left"></i>
+                <i className={classNames({ "fas fa-arrow-left": true, rotaterighticondown: this.props.DropdownisOpen, rotaterighticonleft: !this.props.DropdownisOpen })}></i>
               </div>
             </div>
           </div>
