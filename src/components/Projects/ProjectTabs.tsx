@@ -71,7 +71,7 @@ class ProjectTabs extends React.Component<MyComponentProps, MyComponentStates> {
     if(this.state.toggleNavbarNow){
       this.togglenavlinkto(this.props.Key[1]);
       this.setState({ toggleNavbarNow: false })
-      if (this.props.Key[1] === 'General' || !this.props.Key[1]){
+      if (this.props.Key[1] === 'General' || this.props.Key[0] === 'Leistungen' || !this.props.Key[1]){
         this.togglenavlinkto('Sensorik');
       }
     }
