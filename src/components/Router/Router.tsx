@@ -58,7 +58,8 @@ class Router extends React.Component<{}, MyComponentState> {
             Typescript: false,
             'E-Bike': false,
             SQL: false,
-            Mikrocontroller: false
+            Mikrocontroller: false,
+            Angular: false
           },
           Kontakt: { General: false },
 

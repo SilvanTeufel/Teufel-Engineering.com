@@ -143,17 +143,7 @@ class RouterDropdownField extends React.Component<MyComponentProps, MyComponentS
     //  'btn btn-outline-light dropdown-toggle'      {this.state.fieldstate}
     return row;
   };
-/*
-        <button
-          className={'navbar-toggler'}
-          type="button"
-          id="dropdownMenuButton"
-          data-toggle="dropdown"
-          aria-haspopup="true"
-          onClick={this.props.toggleDropDown}
-          style={{ height: 45, textAlign: 'left' }}
-        ></button>
-*/
+
   render() {
     return this.createField();
   }

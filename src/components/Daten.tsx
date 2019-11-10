@@ -1,4 +1,17 @@
 export const projects = {
+  Angular:
+  {
+    id: 11,
+    title: 'Frontendentwicklung mit AngularJS',
+    date: '06/2019 – dato',
+    company: 'Softwareschmiede in Achern',
+    activities: [
+      'Unterstützung bei der Projektplanung für ein Warenwirtschaftssystem.',
+      'Frontendentwicklung mit AngularJS , Schemaform.io, uiGrid, ...',
+      'Bessere Visualisierung des Frontend mithilfe von CSS.'
+    ],
+    imagepath: './Pictures/KVblue.jpg'
+  },
   Mikrocontroller:
   {
     id: 10,
@@ -6,9 +19,11 @@ export const projects = {
     date: '11/2018 – dato',
     company: 'Gallenschütz GmbH',
     activities: [
-      'Mitwirkung bei der Gesamtkonzipierung des System (IOT/Industrie4.0/Digitalisierung)',
-      'Entwicklung von Platine und Software (C++/Atmel-Studio) zur Steuerung von Zugangskontrollen die in ein Ethernet/Internet-System eingebunden werden.',
-      'Programmierung eines AtMega328P mit AtmelStudio zur Steuerung der Kontrollen. Anbindung eines Wiznet EthernetModul über SPI.'
+      'Mitwirkung beim Konzept des Systems (IOT/Industrie4.0/Digitalisierung).',
+      'Entwicklung des Prototypen, der Hardware bzw. Platine mit KiCad.',
+      'Schreiben der Software (Microcontroller) (Treiber für I2C / SPI / UART / W5500 (http -Client) / PCA9635 / ... ).',
+      'Schreiben der Software für Linux-Server-Backend (REST-API).',
+      'Programmierung des Frontend (ReactJS -Typescript) für Webinterface und Datenabruf.',
     ],
     imagepath: './Pictures/KVblue.jpg'
   },
@@ -17,9 +32,9 @@ export const projects = {
     id: 9,
     title: 'Entwicklung einer Webapp (ReactJS) mit PHP-API und SQL-Datenbank',
     date: '11/2018 – dato',
-    company: 'IT-Consulting Unternehmen',
+    company: 'IT-Consulting Unternehmen.',
     activities: [
-      'Entwicklung des Frontend mit ReactJS',
+      'Entwicklung des Frontend mithilfe der ReactJS-Library.',
       'Programmierung einer API mittels PHP, die Contao (CMS), als Schnittstelle zur mySQL-Datenbank verwendet.'
     ],
     imagepath: './Pictures/PROG.png'
@@ -32,8 +47,8 @@ export const projects = {
     company: 'R & E Stricker Reha-Entwicklungen GmbH',
     activities: [
       'Programmieren eines Regelalgorithmus, zur Weiterleitung des gegengeregelten Signals.',
-      'Auslegung von Filtern für Sensorsignale',
-      'Entwicklung einer Platine mit Mikrocontroller, die zwei Sensorsignale liest (Drehzahl und Gas) und ein geregeltes Signal an die Leistungselektronik weiterleitet'
+      'Auslegung von Filtern für Sensorsignale.',
+      'Entwicklung einer Platine mit Mikrocontroller, die zwei Sensorsignale liest (Drehzahl und Gas) und ein geregeltes Signal an die Leistungselektronik weiterleitet.'
     ],
     imagepath: './Pictures/BIKE.jpg'
   },
@@ -45,7 +60,7 @@ export const projects = {
     company: '-',
     activities: [
       'Programmierung des Frontend über React – Typescript.',
-      'Für userspezifischen Zugriff wurde über ExpressJS eine API programmiert, mittels JWT gesichert und mit einer dokumentenorientierten Datenbank verknüpft',
+      'Für userspezifischen Zugriff wurde über ExpressJS eine API programmiert, mittels JWT gesichert und mit einer dokumentenorientierten Datenbank verknüpft.',
       'Ein Öffentlicher Zugangsbereich mit beschränkten Rechten wurde über die gleiche API realisiert.'
     ],
     imagepath: './Pictures/PROG.jpg'
@@ -60,8 +75,8 @@ export const projects = {
       'Planung einer webbasierten Datenbank für die Eingabe und Speicherung von Produkt und Kundendaten, sowie der Erstellung von Fertigungsaufträgen.',
       'Erstellung und Festlegung der Struktur in Bezug auf den Produktionsablauf des Unternehmens.',
       'Programmierung der Weboberfläche mit Datenbankzugriff und spezifischer Benutzeroberfläche.',
-      'Programmierung des Frontends mit ReactJS',
-      'Realisierung eines lokalen Linux-Server mit dokumentenorietiertem Backend auf LOW-DB-Basis'
+      'Programmierung des Frontends mithilfe der ReactJS-Library.',
+      'Realisierung eines lokalen Linux-Server mit dokumentenorietiertem Backend auf LOW-DB-Basis.'
     ],
     imagepath: './Pictures/DATABASEb.jpg'
   },
@@ -72,7 +87,7 @@ export const projects = {
     date: '04/2018 – 09/2018',
     company: '-',
     activities: [
-      'Planung eines Prototyps zur Positionsdetektion mittels Hall-Sensoren',
+      'Planung eines Prototyps zur Positionsdetektion mittels Hall-Sensoren.',
       'Aufbau des Prototyps und Entwurf eines Referenzmesssystems.',
       'Programmierung eines Mikrocontrollers (C++), sowie einer Windowskonsolenanwendung in C++.',
       'Programmierung einer Scilab/Matlab-Anwendung, zur Visualisierung der Messdaten.',
@@ -106,8 +121,7 @@ export const projects = {
       'Untersuchung und Simulation des Magnetkreises von Hall-Sensoren mit Ansys.',
       'Untersuchungen zur Signalauswertung/-verarbeitung.',
       'Weiterentwicklung einer Signalverarbeitungskette in Matlab/Simulink.',
-      'Filterdesign in Matlab.',
-      'Messdatenanalyse'
+      'Filterdesign in Matlab und Messdatenanalyse.'
     ],
     imagepath: './Pictures/AUTO.jpg'
   },
@@ -134,7 +148,7 @@ export const projects = {
     company: 'Hochschule, Karlsruhe',
     activities: [
       'Einarbeitung in die theoretische Teilchenphysik/-chemie von Gassensoren.',
-      'Herstellung und Untersuchung von Metalloxid-Gassensoren mit chemischer Zugabe von Additiven',
+      'Herstellung und Untersuchung von Metalloxid-Gassensoren mit chemischer Zugabe von Additiven.',
       'Untersuchungen zur Selektivität der Gassensoren in Bezug auf Herstellung und katalytische Effekte.'
     ],
     imagepath: './Pictures/GAS.jpg'
@@ -147,7 +161,7 @@ export const projects = {
     company: 'Elektronikentwicklungs- und Vertriebsunternehmen',
     activities: [
       'Einarbeitung in die Grundlagen des Explosionsschutzes (EX).',
-      'Planung, Aufbau und Durchführung von Temperaturmessungen zur EX-Sicherheit'
+      'Planung, Aufbau und Durchführung von Temperaturmessungen zur EX-Sicherheit.'
     ],
     imagepath: './Pictures/EX.png'
   }

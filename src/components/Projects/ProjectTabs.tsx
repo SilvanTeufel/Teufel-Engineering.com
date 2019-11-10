@@ -42,7 +42,8 @@ class ProjectTabs extends React.Component<MyComponentProps, MyComponentStates> {
                 Typescript: false,
                 'E-Bike': false,
                 SQL: false,
-                Mikrocontroller: false
+                Mikrocontroller: false,
+                Angular: false
                },
       projectTitles: undefined,
       toggleNavbarNow: false,
