@@ -13,7 +13,7 @@ export class CustomRoute extends React.Component<Props, State> {
   constructor(props: Props) {
     super(props);
     this.state = {
-      loading: false
+      loading: false,
     };
   }
 
@@ -27,8 +27,8 @@ export class CustomRoute extends React.Component<Props, State> {
   }
 
   render() :JSX.Element {
+
     const { component: Component, ...rest } = this.props;
-    console.log(this.props.path);
     return (
       <div>
         <Route
@@ -38,7 +38,7 @@ export class CustomRoute extends React.Component<Props, State> {
               <div>'loading'</div>
             ) : (
                 <>
-                    <Component {...props} Key={this.createKeys(this.props.path)} />
+                  <Component {...props} Key={this.createKeys(this.props.path)} />
                 </>
 
               )

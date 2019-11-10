@@ -23,7 +23,6 @@ class NavbarCollapse extends React.Component<MyComponentProps, MyComponentStates
 
   createButtons = () => {
     const buttons = [];
-    console.log(this.props.buttons);
     for (var key in this.props.buttons){
     if(key !== 'General')  
         buttons.push(

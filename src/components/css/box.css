@@ -98,3 +98,16 @@
   margin-top: 20vh;
   margin-bottom: 15vh;
 }
+
+.turnLogo {
+  animation: turner 4s infinite linear;
+}
+
+@keyframes turner {
+  from {
+    transform: rotateY(0deg);
+  }
+  to {
+    transform: rotateY(360deg);
+  }
+}

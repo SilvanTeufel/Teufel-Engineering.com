@@ -107,7 +107,6 @@ class ProjectTabs extends React.Component<MyComponentProps, MyComponentStates> {
   createSingleProject = () => {
     const project = [];
 
-      console.log(projects);
     for (var k in projects) {
       var projectsV: any = projects;
 
@@ -143,7 +142,6 @@ class ProjectTabs extends React.Component<MyComponentProps, MyComponentStates> {
   }
 
   render() {
-    console.log(this.props.Key)
     this.toggleViaNavbar();
     return (
       <div className="fadein">

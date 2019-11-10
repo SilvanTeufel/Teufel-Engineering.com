@@ -134,7 +134,6 @@ class Router extends React.Component<{}, MyComponentState> {
   }
 
   getIconState = (key: string) => {
-    console.log(this.state.routerstructure.iconstate[key]);
     return this.state.routerstructure.iconstate[key];
   }
 
@@ -207,7 +206,7 @@ class Router extends React.Component<{}, MyComponentState> {
     comps.push(
       <CustomRoute path="/Home" component={Home} />
     );
-
+    
     for (var key0 in this.state.routerstructure.navKeys)
     {
         for (var key1 in this.state.routerstructure.navKeys[key0]) {

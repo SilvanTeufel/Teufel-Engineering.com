@@ -7,7 +7,7 @@ import ProjectTabs from './Projects/ProjectTabs';
 import './css/box.css';
 import './css/Cursor.css';
 const LogoImage = require('./Pictures/LogoINV1.png');
-
+var classNames = require('classnames');
 
 interface MyComponentStates {}
 
@@ -39,10 +39,13 @@ class Home extends React.Component<MyComponentProps, MyComponentStates> {
     return 0;
   };
 
+  checkKey =  () => {
+
+  }
 
   createHome = () => {
     const home = [];
-
+    console.log(this.props.Key);
     home.push(
       <div className="row">
         <div className="col">
@@ -52,7 +55,7 @@ class Home extends React.Component<MyComponentProps, MyComponentStates> {
               <div className="col">
                 <div className="row text-left align-items-center">
                   <div className="col-md-1 col-3">
-                    <img src={LogoImage} alt="" className="rounded float-left" style={{ opacity: 0.8, maxHeight: 65 }} />
+                    <img src={LogoImage} alt="" className={classNames({ "rounded float-left": true, turnLogo: this.props.Key[0] ==='Philosophie' })} style={{ opacity: 0.8, maxHeight: 65 }} />
                   </div>
                   <div className="col-md-11 col-9">
                     <h3 className="cursor-pointer">{'Philosophie'}</h3>
@@ -72,7 +75,7 @@ class Home extends React.Component<MyComponentProps, MyComponentStates> {
               <div className="col">
                 <div className="row text-left align-items-center">
                   <div className="col-md-1 col-3">
-                    <img src={LogoImage} alt="" className="rounded float-left" style={{ opacity: 0.8, maxHeight: 65 }} />
+                    <img src={LogoImage} alt="" className={classNames({ "rounded float-left": true, turnLogo: this.props.Key[0] === 'Leistungen' })} style={{ opacity: 0.8, maxHeight: 65 }} />
                   </div>
                   <div className=" col-md-11 col-9">
                     <h3 className="cursor-pointer">{'Leistungen'}</h3>
@@ -92,7 +95,7 @@ class Home extends React.Component<MyComponentProps, MyComponentStates> {
               <div className="col">
                 <div className="row text-left align-items-center">
                   <div className="col-md-1 col-3">
-                    <img src={LogoImage} alt="" className="rounded float-left" style={{ opacity: 0.8, maxHeight: 65 }} />
+                    <img src={LogoImage} alt="" className={classNames({ "rounded float-left": true, turnLogo: this.props.Key[0] === 'Projekte' })} style={{ opacity: 0.8, maxHeight: 65 }} />
                   </div>
                   <div className=" col-md-11 col-9">
                     <h3 className="cursor-pointer">{'Projekte'}</h3>
@@ -112,7 +115,7 @@ class Home extends React.Component<MyComponentProps, MyComponentStates> {
               <div className="col">
                 <div className="row text-left align-items-center">
                   <div className="col-md-1 col-3">
-                    <img src={LogoImage} alt="" className="rounded float-left" style={{ opacity: 0.8, maxHeight: 65 }} />
+                    <img src={LogoImage} alt="" className={classNames({ "rounded float-left": true, turnLogo: this.props.Key[0] === 'Kontakt' })} style={{ opacity: 0.8, maxHeight: 65 }} />
                   </div>
                   <div className=" col-md-11 col-9">
                     <h3 className="cursor-pointer">{'Kontakt'}</h3>

@@ -100,7 +100,6 @@ class Leistungen extends React.Component<MyComponentProps, MyComponentStates> {
   }
 
   render() {
-    console.log(this.props.Key)
     this.toggleViaNavbar();
     return (
       <div className="row">
