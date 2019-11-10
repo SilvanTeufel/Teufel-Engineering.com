@@ -37,7 +37,7 @@ class ProjectTabs extends React.Component<MyComponentProps, MyComponentStates> {
                 Masterthesis: false,
                 Spektroskopie: false,
                 Temperatur: false,
-                Sensorik: false,
+                Sensorik: true,
                 React: false,
                 Typescript: false,
                 'E-Bike': false,
@@ -71,7 +71,7 @@ class ProjectTabs extends React.Component<MyComponentProps, MyComponentStates> {
     if(this.state.toggleNavbarNow){
       this.togglenavlinkto(this.props.Key[1]);
       this.setState({ toggleNavbarNow: false })
-      if(this.props.Key[1] === 'General'){
+      if (this.props.Key[1] === 'General' || !this.props.Key[1]){
         this.togglenavlinkto('Sensorik');
       }
     }
