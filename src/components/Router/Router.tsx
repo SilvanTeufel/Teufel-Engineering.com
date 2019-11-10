@@ -9,6 +9,8 @@ import NavbarCollapse from './NavbarCollapse';
 import Impressum from '../Footer/Impressum';
 import RouterDropdownField from './RouterDropdownField';
 import '../css/Header.css';
+import '../css/Cursor.css';
+
 
 const LogoImage = require('../Pictures/LogoINV1.png');
 
@@ -248,8 +250,8 @@ class Router extends React.Component<{}, MyComponentState> {
             <img src={LogoImage} alt="" className="rounded float-left" style={{ opacity: 0.8, maxHeight: 100 }} />
           </div>
             <div className="col-md-5 col-3 text-left">
-              <h2>Teufel Engineering</h2>
-              <h6 className="d-none d-md-block">Silvan Teufel - Master of Science</h6>
+            <h2 className="cursor-pointer">Teufel Engineering</h2>
+            <h6 className="d-none d-md-block cursor-pointer">Silvan Teufel - Master of Science</h6>
             </div>
           <div className="col-md-3 col-1" />
         </div>
