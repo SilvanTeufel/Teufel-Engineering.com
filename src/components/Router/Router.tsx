@@ -24,7 +24,7 @@ class Router extends React.Component<{}, MyComponentState> {
   constructor(props: any) {
     super(props);
     this.state = {
-      DropdownisOpen: false,
+      DropdownisOpen: true,
       redirectkeys: { Philosophie: {
                          General: false,       
                       },
