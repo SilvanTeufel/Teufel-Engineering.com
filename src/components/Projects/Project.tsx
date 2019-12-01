@@ -1,5 +1,5 @@
-import * as React from 'react';
-import '../css/Cursor.css';
+import * as React from "react";
+import "../css/Cursor.css";
 
 interface MyComponentProps {
   Data: any;
@@ -13,13 +13,12 @@ class Project extends React.Component<MyComponentProps, {}> {
 
   createActivities = () => {
     const activities = [];
-    
 
     for (let i = 0; i < this.props.Data.activities.length; i++) {
       activities.push(
         <tr>
-          <td >{'#' + (i + 1)}</td>
-          <td >{this.props.Data.activities[i]}</td>
+          <td>{"#" + (i + 1)}</td>
+          <td>{this.props.Data.activities[i]}</td>
         </tr>
       );
     }
@@ -30,7 +29,13 @@ class Project extends React.Component<MyComponentProps, {}> {
     return (
       <div>
         <br />
-        <table className="table table-bordered table-dark text-left table-hover cursor-pointer" style={{ backgroundColor: 'rgba(0, 0, 0, 0)', color: 'black'}}>
+        <table
+          className="table table-bordered table-dark text-left table-hover cursor-pointer"
+          style={{
+            backgroundColor: "rgba(0, 0, 0, 0)",
+            color: "black"
+          }}
+        >
           <tr>
             <th scope="col" />
             <th scope="col">
