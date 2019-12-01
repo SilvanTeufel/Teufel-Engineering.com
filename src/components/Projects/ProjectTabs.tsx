@@ -291,7 +291,7 @@ class ProjectTabs extends React.Component<MyComponentProps, MyComponentStates> {
         </div>
         <a className="carousel-control-prev" role="button" data-slide="prev">
           <span
-            className="carousel-control-prev-icon"
+            className="carousel-control-prev-icon cursor-pointer"
             aria-hidden="true"
             onClick={() => this.nextSlide(false)}
           ></span>
@@ -299,7 +299,7 @@ class ProjectTabs extends React.Component<MyComponentProps, MyComponentStates> {
         </a>
         <a className="carousel-control-next" role="button" data-slide="next">
           <span
-            className="carousel-control-next-icon"
+            className="carousel-control-next-icon cursor-pointer"
             aria-hidden="true"
             onClick={() => this.nextSlide(true)}
           ></span>
