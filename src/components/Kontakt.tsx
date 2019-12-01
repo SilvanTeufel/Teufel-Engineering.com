@@ -1,6 +1,6 @@
-import * as React from 'react';
-import { sendMail } from './APIClient/sendMail';
-import Popup from './Popup';
+import * as React from "react";
+import { sendMail } from "./APIClient/sendMail";
+import Popup from "./Popup";
 // import { sendMail } from '../Nodemailer';
 
 interface MyComponentStates {
@@ -16,11 +16,11 @@ class Kontakt extends React.Component<{}, MyComponentStates> {
   constructor(props: any) {
     super(props);
     this.state = {
-      formulardata: ['', '', '', ''],
-      formulartitles: ['Name', 'Firma', 'eMail', 'Anfrage'],
+      formulardata: ["", "", "", ""],
+      formulartitles: ["Name", "Firma", "eMail", "Anfrage"],
       formularI: undefined,
       showPopup: false,
-      popuptext: '',
+      popuptext: "",
       DSGVOaccepted: false
     };
   }
@@ -75,15 +75,19 @@ class Kontakt extends React.Component<{}, MyComponentStates> {
     field.push(
       <div className="row">
         <div className="col-md-3 col-2">
-          <label>{this.state.formulartitles[this.state.formulartitles.length - 1]}:</label>
+          <label>
+            {this.state.formulartitles[this.state.formulartitles.length - 1]}:
+          </label>
         </div>
         <div className="col-md-6 col-9">
           <textarea
             className="form-control"
             id="exampleFormControlTextarea1"
             rows={4}
-            onFocus={() => this.setActualI(this.state.formulartitles.length - 1)}
-            onChange={ () => this.editFormular.bind(this)}
+            onFocus={() =>
+              this.setActualI(this.state.formulartitles.length - 1)
+            }
+            onChange={() => this.editFormular.bind(this)}
           />
           <div className="col-md-3 col-1" />
         </div>
@@ -96,7 +100,7 @@ class Kontakt extends React.Component<{}, MyComponentStates> {
   sendmail = () => {
     if (this.state.DSGVOaccepted) {
       sendMail(
-        'http://couponing24.ddns.net:3050/sendmail',
+        "http://couponing24.ddns.net:3050/sendmail",
         this.state.formulardata[0],
         this.state.formulardata[1],
         this.state.formulardata[2],
@@ -104,12 +108,15 @@ class Kontakt extends React.Component<{}, MyComponentStates> {
       )
         .then((data: any) => {
           if (data.status === 200) {
-            this.setState({ popuptext: 'Ihre Nachricht wurde an info@teufel-engineering.com übermittelt.' });
+            this.setState({
+              popuptext:
+                "Ihre Nachricht wurde an info@teufel-engineering.com übermittelt."
+            });
             this.triggerPopup();
           } else {
             this.setState({
               popuptext:
-                'Ihr Nachricht wurde eventuell nicht übermittelt. Versuchen sie es erneut oder schreiben sie direkt an info@teufel-engineering.com.'
+                "Ihr Nachricht wurde eventuell nicht übermittelt. Versuchen sie es erneut oder schreiben sie direkt an info@teufel-engineering.com."
             });
             this.triggerPopup();
           }
@@ -117,12 +124,15 @@ class Kontakt extends React.Component<{}, MyComponentStates> {
         .catch((err: any) => {
           this.setState({
             popuptext:
-              'Ein Fehler ist aufgetreten. Versuchen sie es erneut oder schreiben sie direkt an info@teufel-engineering.com.'
+              "Ein Fehler ist aufgetreten. Versuchen sie es erneut oder schreiben sie direkt an info@teufel-engineering.com."
           });
           this.triggerPopup();
         });
     } else {
-      this.setState({ popuptext: 'Sie müssen die DSGVO akzeptieren um eine Nachricht zu versenden.' });
+      this.setState({
+        popuptext:
+          "Sie müssen die DSGVO akzeptieren um eine Nachricht zu versenden."
+      });
       this.triggerPopup();
     }
   };
@@ -141,7 +151,11 @@ class Kontakt extends React.Component<{}, MyComponentStates> {
       modal.push(
         <Popup
           Modalbutton={
-            <button type="button" className="btn btn-outline-light" onClick={() => this.triggerPopup()}>
+            <button
+              type="button"
+              className="btn btn-outline-light"
+              onClick={() => this.triggerPopup()}
+            >
               <strong>Schließen</strong>
             </button>
           }
@@ -196,7 +210,7 @@ class Kontakt extends React.Component<{}, MyComponentStates> {
         <div className="row text-left align-items-center">
           <div className="col-md-1 col-0" />
           <div className="col-md-3 col-12">
-            <p className="cursor-pointer-invert">
+            <p className="cursor-pointer-invert h5">
               Silvan Teufel
               <br />
               77815 Bühl
@@ -208,8 +222,11 @@ class Kontakt extends React.Component<{}, MyComponentStates> {
               Tel.: 01605170640
               <br />
               <br />
-              <a href={'https://github.com/SilvanTeufel'} style={{color: 'black'}}>
-              https://github.com/SilvanTeufel
+              <a
+                href={"https://github.com/SilvanTeufel"}
+                style={{ color: "black" }}
+              >
+                https://github.com/SilvanTeufel
               </a>
               <br />
             </p>

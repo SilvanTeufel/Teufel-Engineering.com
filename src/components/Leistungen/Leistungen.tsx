@@ -1,14 +1,14 @@
-import * as React from 'react';
-import Measure from './Measure';
-import Study from './Study';
-import Database from './Database';
-import Further from './Further';
-import 'react-responsive-carousel/lib/styles/carousel.min.css';
-import '../css/Carousel.css';
-import '../css/MindMap.css';
-import '../css/Fade.css';
-import '../css/Cursor.css';
-var classNames = require('classnames');
+import * as React from "react";
+import Measure from "./Measure";
+import Study from "./Study";
+import Database from "./Database";
+import Further from "./Further";
+import "react-responsive-carousel/lib/styles/carousel.min.css";
+import "../css/Carousel.css";
+import "../css/MindMap.css";
+import "../css/Fade.css";
+import "../css/Cursor.css";
+var classNames = require("classnames");
 
 interface MyComponentStates {
   navlink: any;
@@ -16,15 +16,19 @@ interface MyComponentStates {
 }
 
 interface MyComponentProps {
-  Key?: any
+  Key?: any;
 }
-
 
 class Leistungen extends React.Component<MyComponentProps, MyComponentStates> {
   constructor(props: any) {
     super(props);
     this.state = {
-      navlink: { Messsysteme: false, Studien: false, Datenbanken: false, Sonstiges: false },
+      navlink: {
+        Messsysteme: false,
+        Studien: false,
+        Datenbanken: false,
+        Sonstiges: false
+      },
       toggleNavbarNow: false
     };
   }
@@ -45,22 +49,20 @@ class Leistungen extends React.Component<MyComponentProps, MyComponentStates> {
   toggleViaNavbar = () => {
     if (this.state.toggleNavbarNow) {
       this.togglenavlinkto(this.props.Key[1]);
-      this.setState({ toggleNavbarNow: false })
-      if (this.props.Key[1] === 'General') {
-        this.togglenavlinkto('Sensorik');
+      this.setState({ toggleNavbarNow: false });
+      if (this.props.Key[1] === "General") {
+        this.togglenavlinkto("Sensorik");
       }
     }
-  }
+  };
 
   componentWillReceiveProps() {
-    this.setState({ toggleNavbarNow: true })
-  } 
-
-  componentDidMount() {
-    this.togglenavlinkto('Messsysteme');
+    this.setState({ toggleNavbarNow: true });
   }
 
-
+  componentDidMount() {
+    this.togglenavlinkto("Messsysteme");
+  }
 
   switchNavTab = () => {
     const tab = [];
@@ -68,36 +70,55 @@ class Leistungen extends React.Component<MyComponentProps, MyComponentStates> {
     var somethingIsTrue = false;
     for (var key in this.state.navlink) {
       if (this.state.navlink[key]) {
-        somethingIsTrue = this.state.navlink[key]
+        somethingIsTrue = this.state.navlink[key];
       }
     }
 
     if (!somethingIsTrue) {
       const navlink = this.state.navlink;
       navlink.Messsysteme = true;
-      this.setState({navlink})
-    } 
+      this.setState({ navlink });
+    }
 
-   tab.push(
-    <div>
-       <div className={classNames({ fadein: this.state.navlink.Messsysteme, 'd-none': !this.state.navlink.Messsysteme })}>
-         {<Measure/>}
-       </div>
-       <div className={classNames({ fadein: this.state.navlink.Studien, 'd-none': !this.state.navlink.Studien })}>
-         {<Study/>}
-       </div>
-       <div className={classNames({ fadein: this.state.navlink.Datenbanken, 'd-none': !this.state.navlink.Datenbanken })}>
-         {<Database/>}
-       </div>
-       <div className={classNames({ fadein: this.state.navlink.Sonstiges, 'd-none': !this.state.navlink.Sonstiges })}>
-         {<Further/>}
-       </div>
-    </div>
-   )
+    tab.push(
+      <div>
+        <div
+          className={classNames({
+            fadein: this.state.navlink.Messsysteme,
+            "d-none": !this.state.navlink.Messsysteme
+          })}
+        >
+          {<Measure />}
+        </div>
+        <div
+          className={classNames({
+            fadein: this.state.navlink.Studien,
+            "d-none": !this.state.navlink.Studien
+          })}
+        >
+          {<Study />}
+        </div>
+        <div
+          className={classNames({
+            fadein: this.state.navlink.Datenbanken,
+            "d-none": !this.state.navlink.Datenbanken
+          })}
+        >
+          {<Database />}
+        </div>
+        <div
+          className={classNames({
+            fadein: this.state.navlink.Sonstiges,
+            "d-none": !this.state.navlink.Sonstiges
+          })}
+        >
+          {<Further />}
+        </div>
+      </div>
+    );
 
-
-   return tab;
-  }
+    return tab;
+  };
 
   render() {
     this.toggleViaNavbar();
@@ -106,53 +127,78 @@ class Leistungen extends React.Component<MyComponentProps, MyComponentStates> {
         <div className="col">
           <div className="row">
             <div className="col">
-              <br/>
+              <br />
             </div>
           </div>
           <div className="row">
             <div className="col">
               <ul className="nav nav-tabs">
-                <li className="nav-item cursor-pointer" onClick={() => this.togglenavlinkto('Messsysteme')}>
-                  <div className={classNames({ 'nav-link': true, active: this.state.navlink.Messsysteme })}>
-                Messsysteme
-              </div>
-            </li>
-
-                <li className="nav-item cursor-pointer" onClick={() => this.togglenavlinkto('Studien')}>
-              <div
-                    className={classNames({ 'nav-link': true, active: this.state.navlink.Studien })}
-                
-              >
-                Studien
-                          </div>
-            </li>
-                <li className="nav-item cursor-pointer" onClick={() => this.togglenavlinkto('Datenbanken')}>
+                <li
+                  className="nav-item cursor-pointer"
+                  onClick={() => this.togglenavlinkto("Messsysteme")}
+                >
                   <div
-                    className={classNames({ 'nav-link': true, active: this.state.navlink.Datenbanken })}
-
+                    className={classNames({
+                      "nav-link": true,
+                      active: this.state.navlink.Messsysteme
+                    })}
                   >
-                    Datenbanken
-                          </div>
+                    <strong>Messsysteme</strong>
+                  </div>
                 </li>
-                <li className="nav-item cursor-pointer" onClick={() => this.togglenavlinkto('Sonstiges')}>
-                  <div className={classNames({ 'nav-link': true, active: this.state.navlink.Sonstiges })}>
-                Sonstiges
-                          </div>
-            </li>
-          </ul>
-            </div></div>
-          <div className="row">
-            <div className="col-12">
-              {this.switchNavTab()}
+
+                <li
+                  className="nav-item cursor-pointer"
+                  onClick={() => this.togglenavlinkto("Studien")}
+                >
+                  <div
+                    className={classNames({
+                      "nav-link": true,
+                      active: this.state.navlink.Studien
+                    })}
+                  >
+                    <strong>Studien</strong>
+                  </div>
+                </li>
+                <li
+                  className="nav-item cursor-pointer"
+                  onClick={() => this.togglenavlinkto("Datenbanken")}
+                >
+                  <div
+                    className={classNames({
+                      "nav-link": true,
+                      active: this.state.navlink.Datenbanken
+                    })}
+                  >
+                    <strong>Datenbanken</strong>
+                  </div>
+                </li>
+                <li
+                  className="nav-item cursor-pointer"
+                  onClick={() => this.togglenavlinkto("Sonstiges")}
+                >
+                  <div
+                    className={classNames({
+                      "nav-link": true,
+                      active: this.state.navlink.Sonstiges
+                    })}
+                  >
+                    <strong>Sonstiges</strong>
+                  </div>
+                </li>
+              </ul>
             </div>
+          </div>
+          <div className="row">
+            <div className="col-12">{this.switchNavTab()}</div>
           </div>
           <div className="row">
             <div className="col">
               <br />
             </div>
           </div>
+        </div>
       </div>
-    </div >
     );
   }
 }
