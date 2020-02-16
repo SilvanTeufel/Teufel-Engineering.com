@@ -25,3 +25,9 @@
   margin: 0 auto !important;
   height: 60vh;
 }
+
+.navbar-icon:hover {
+  cursor: pointer;
+  color: lightblue;
+ 
+}

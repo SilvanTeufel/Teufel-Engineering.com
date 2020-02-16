@@ -1,16 +1,16 @@
-import * as React from 'react';
-import './App.css';
-import Router from './components/Router/Router';
+import * as React from "react";
+import "./App.css";
+import Router from "./components/Router/Router";
 
-const background = require('./components/Pictures/background1111.jpg');
-const { detect } = require('detect-browser');
+const background = require("./components/Pictures/background11111111.jpg");
+const { detect } = require("detect-browser");
 const browser = detect();
 
 class App extends React.Component<{}, {}> {
   RenderApp = () => {
     const app = [];
 
-    if (browser.name === 'ie' || browser.name === 'edge') {
+    if (browser.name === "ie" || browser.name === "edge") {
       app.push(
         <div>
           <p>Your Browser is not Supported please use Chrome or Firefox</p>
@@ -18,21 +18,19 @@ class App extends React.Component<{}, {}> {
       );
     } else {
       app.push(
-        <div style={{backgroundColor: "lightgrey"}}>
+        <div style={{ backgroundColor: "lightgrey" }}>
           {
-            
-          <img
-            src={background}
-            alt=""
-            className="rounded float-left"
-            style={{
-              position: 'fixed',
-              display: 'block',
-              width: '100%',
-              height: '100%'
-            }}
-          />
-            
+            <img
+              src={background}
+              alt=""
+              className="rounded float-left"
+              style={{
+                position: "fixed",
+                display: "block",
+                width: "100%",
+                height: "100%"
+              }}
+            />
           }
 
           <Router />
