@@ -110,7 +110,7 @@ class Router extends React.Component<{}, MyComponentState> {
   };
 
   scrollToBottom = () => {
-    scroller.scrollTo(1500);
+    scroller.scrollTo(2500);
   };
 
   redirectToLink = (key0: string, key1: string) => {

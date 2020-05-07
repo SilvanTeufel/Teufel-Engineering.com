@@ -1,6 +1,7 @@
 import * as React from "react";
 import { sendMail } from "./APIClient/sendMail";
 import Popup from "./Popup";
+const Silvan = require("./Pictures/Silvan.jpg");
 // import { sendMail } from '../Nodemailer';
 
 interface MyComponentStates {
@@ -208,8 +209,8 @@ class Kontakt extends React.Component<{}, MyComponentStates> {
         </div>
         */}
         <div className="row text-left align-items-center">
-          <div className="col-md-1 col-0" />
-          <div className="col-md-3 col-12">
+          <div className="col-lg-1 col-0" />
+          <div className="col-lg-3 col-12">
             <p className="cursor-pointer-invert h5">
               Silvan Teufel
               <br />
@@ -231,17 +232,19 @@ class Kontakt extends React.Component<{}, MyComponentStates> {
               <br />
             </p>
           </div>
-          <div className="col-md-4 col-0" />
-          <div className="col-md-3 col-12">
-            {/*
-            <p>
-              e-Mail: info@teufel-engineering.com
-              <br />
-              Tel.: 01605170640
-              <br />
-          </p>*/}
+          <div className="col-lg-4 col-0">
+            <img
+              src={Silvan}
+              alt=""
+              className="rounded float-left kontaktimage"
+              style={{
+                maxHeight: 200,
+                border: "2px solid grey"
+              }}
+            />
           </div>
-          <div className="col-md-1 col-0" />
+          <div className="col-lg-3 col-12"></div>
+          <div className="col-lg-1 col-0" />
         </div>
         <div className="row text-left align-items-center">
           <div className="col ">
