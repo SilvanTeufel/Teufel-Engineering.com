@@ -5,7 +5,7 @@ interface MyComponentProps {
   Data: any;
 }
 
-class Project extends React.Component<MyComponentProps, {}> {
+export default class Product extends React.Component<MyComponentProps, {}> {
   constructor(props: MyComponentProps) {
     super(props);
     this.state = {};
@@ -27,7 +27,15 @@ class Project extends React.Component<MyComponentProps, {}> {
         <div className="col">
           <ul className="list-unstyled text-left">
             <li>
-              <strong>{this.props.Data.title}</strong>
+              <strong>
+                <a
+                  className="text-dark"
+                  target="_blank"
+                  href="https://teufel-time-tracking.com/#/"
+                >
+                  {this.props.Data.title}
+                </a>
+              </strong>
             </li>
 
             <li style={{ marginBottom: "2vh" }}>
@@ -44,5 +52,3 @@ class Project extends React.Component<MyComponentProps, {}> {
     );
   }
 }
-
-export default Project;

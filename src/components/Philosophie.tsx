@@ -1,7 +1,6 @@
 import * as React from "react";
 import { Radar } from "react-chartjs-2";
 
-
 class Philosophie extends React.Component<{}, {}> {
   createPlace = () => {
     const place = [];
@@ -13,10 +12,10 @@ class Philosophie extends React.Component<{}, {}> {
 
   render() {
     return (
-      <div className="row">
+      <div className="row align-items-center">
         <div className="col-md"></div>
-        <div className="col-lg-5  col-12 text-left">
-          <h5 className="cursor-pointer-invert" style={{ marginTop: "1vh" }}>
+        <div className="col-lg-6  col-12 text-left">
+          <h4 className="cursor-pointer-invert" style={{ marginTop: "1vh" }}>
             Als freiberuflicher Entwickler habe ich Herausforderungen niemals
             gescheut, weshalb ich, sowohl im Hardwarebereich (Entwerfen von
             Platinen, Filtern, Messdatenanalyse, usw.) als auch im
@@ -27,9 +26,9 @@ class Philosophie extends React.Component<{}, {}> {
             Courage und unkonventionelles Denken sind die Werkzeuge, mit denen
             ich arbeite. Falls Sie diese Werte ebenfalls schätzen, würde es mich
             freuen mit Ihnen zusammenzuarbeiten.
-          </h5>
+          </h4>
         </div>
-        <div className="col-lg-6  col-12 radarImage">
+        <div className="col-lg-5  col-12 radarImage">
           <Radar
             data={{
               labels: [
@@ -42,7 +41,7 @@ class Philosophie extends React.Component<{}, {}> {
                 "Electronics",
                 "Strength",
                 "Agility",
-                "Stamina"
+                "Stamina",
               ],
               datasets: [
                 {
@@ -51,9 +50,9 @@ class Philosophie extends React.Component<{}, {}> {
                   borderColor: "rgba(7, 29, 202 ,1)",
                   hoverBackgroundColor: "rgba(7, 29, 202 ,0.4)",
                   hoverBorderColor: "rgba(7, 29, 202 ,1)",
-                  data: [75, 97, 73, 88, 5, 75, 95, 100, 15, 70]
-                }
-              ]
+                  data: [75, 97, 73, 88, 5, 75, 95, 100, 15, 70],
+                },
+              ],
             }}
             options={{
               legend: {
@@ -61,16 +60,16 @@ class Philosophie extends React.Component<{}, {}> {
                 labels: {
                   fontSize: 12,
                   fontStyle: "bold",
-                  fontColor: "rgb(0, 0, 0)"
-                }
+                  fontColor: "rgb(0, 0, 0)",
+                },
               },
               scale: {
                 pointLabels: {
                   fontSize: 12,
                   fontStyle: "bold",
-                  fontColor: "rgb(0, 0, 0)"
-                }
-              }
+                  fontColor: "rgb(0, 0, 0)",
+                },
+              },
             }}
           />
         </div>

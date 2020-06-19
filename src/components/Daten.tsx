@@ -9,9 +9,9 @@ export const projects = {
       "Frontendentwicklung mit AngularJS , Schemaform.io, uiGrid, ...",
       "Bessere Visualisierung des Frontend mithilfe von CSS.",
       "Konzeptentwicklung für neue Projekte.",
-      "Entwicklung von Strategien und Lösungen für Projekte."
+      "Entwicklung von Strategien und Lösungen für Projekte.",
     ],
-    imagepath: "./Pictures/KVblue.jpg"
+    imagepath: "./Pictures/KVblue.jpg",
   },
   Mikrocontroller: {
     id: 10,
@@ -23,9 +23,9 @@ export const projects = {
       "Entwicklung des Prototypen, der Hardware bzw. Platine mit KiCad.",
       "Schreiben der Software (Microcontroller) (Treiber für I2C / SPI / UART / W5500 (http -Client) / PCA9635 / ... ).",
       "Schreiben der Software für Linux-Server-Backend (REST-API).",
-      "Programmierung des Frontend (ReactJS -Typescript) für Webinterface und Datenabruf."
+      "Programmierung des Frontend (ReactJS -Typescript) für Webinterface und Datenabruf.",
     ],
-    imagepath: "./Pictures/KVblue.jpg"
+    imagepath: "./Pictures/KVblue.jpg",
   },
   SQL: {
     id: 9,
@@ -36,9 +36,9 @@ export const projects = {
       "Entwicklung des Frontend mithilfe von ReactJS.",
       "Programmierung einer API mittels PHP, die Contao (CMS), als Schnittstelle zur mySQL-Datenbank verwendet.",
       "Entwicklung von Styling und Animationen über CSS.",
-      "Teilnahme an Diskussionen zur Lösungsfindung."
+      "Teilnahme an Diskussionen zur Lösungsfindung.",
     ],
-    imagepath: "./Pictures/PROG.png"
+    imagepath: "./Pictures/PROG.png",
   },
   "E-Bike": {
     id: 8,
@@ -50,9 +50,9 @@ export const projects = {
       "Entwicklung einer Platine mit Mikrocontroller, zur Detektion von Sensorsignalen.",
       "Auswertung der Signale und Entwicklung von digitalen und analogen Filtern",
       "Aufnahme von Messwerten für Kalibrierkurven und implementierung der Ergebnisse ins Programm",
-      "Dokumentation des Projekts."
+      "Dokumentation des Projekts.",
     ],
-    imagepath: "./Pictures/BIKE.jpg"
+    imagepath: "./Pictures/BIKE.jpg",
   },
   Typescript: {
     id: 7,
@@ -64,9 +64,9 @@ export const projects = {
       "Für userspezifischen Zugriff wurde über ExpressJS eine API programmiert, mittels JWT gesichert und mit einer dokumentenorientierten Datenbank verknüpft.",
       "Ein Öffentlicher Zugangsbereich mit beschränkten Rechten wurde über die gleiche API realisiert.",
       "Programmierung beinhaltet Rechtevergabe und Benutzerverwaltung.",
-      "Dokumentation des Projekts"
+      "Dokumentation des Projekts",
     ],
-    imagepath: "./Pictures/PROG.jpg"
+    imagepath: "./Pictures/PROG.jpg",
   },
   React: {
     id: 6,
@@ -78,9 +78,9 @@ export const projects = {
       "Erstellung und Festlegung der Struktur in Bezug auf den Produktionsablauf des Unternehmens.",
       "Programmierung der Weboberfläche mit Datenbankzugriff und spezifischer Benutzeroberfläche.",
       "Programmierung des Frontends mithilfe der ReactJS-Library.",
-      "Realisierung eines lokalen Linux-Server mit dokumentenorietiertem Backend auf LOW-DB-Basis."
+      "Realisierung eines lokalen Linux-Server mit dokumentenorietiertem Backend auf LOW-DB-Basis.",
     ],
-    imagepath: "./Pictures/DATABASEb.jpg"
+    imagepath: "./Pictures/DATABASEb.jpg",
   },
   Sensorik: {
     id: 5,
@@ -92,9 +92,9 @@ export const projects = {
       "Aufbau des Prototyps und Entwurf eines Referenzmesssystems.",
       "Programmierung eines Mikrocontrollers (C++), sowie einer Windowskonsolenanwendung in C++.",
       "Programmierung einer Scilab/Matlab-Anwendung, zur Visualisierung der Messdaten.",
-      "Physikalische Interpretation und Auswertung."
+      "Physikalische Interpretation und Auswertung.",
     ],
-    imagepath: "./Pictures/OSZI.jpg"
+    imagepath: "./Pictures/OSZI.jpg",
   },
   Temperatur: {
     id: 4,
@@ -106,9 +106,9 @@ export const projects = {
       "Programmierung eines Mikrocontrollers der die Messdaten verarbeitet und filtert.",
       "Programmierung einer Konsolenanwendung zur Auswertung und Ablage der Ergebnisse.",
       "Einrichtung der Verwaltung der Messergebnisse auf lokaler Weboberfläche.",
-      "Physikalische Interpretation und Auswertung."
+      "Physikalische Interpretation und Auswertung.",
     ],
-    imagepath: "./Pictures/THERMO.jpg"
+    imagepath: "./Pictures/THERMO.jpg",
   },
   Masterthesis: {
     id: 3,
@@ -121,9 +121,9 @@ export const projects = {
       "Untersuchung und Simulation des Magnetkreises von Hall-Sensoren mit Ansys.",
       "Untersuchungen zur Signalauswertung/-verarbeitung.",
       "Weiterentwicklung einer Signalverarbeitungskette in Matlab/Simulink.",
-      "Filterdesign in Matlab und Messdatenanalyse."
+      "Filterdesign in Matlab und Messdatenanalyse.",
     ],
-    imagepath: "./Pictures/AUTO.jpg"
+    imagepath: "./Pictures/AUTO.jpg",
   },
   Spektroskopie: {
     id: 2,
@@ -135,9 +135,9 @@ export const projects = {
       "Entwickeln von Physiklaisch Sinnvollen Ersatzschaltbildern.",
       "Simulation der Ersatzschaltbilder in Matlab.",
       "Vergleich von Simulationsergebnissen mit Messergebnissen.",
-      "Schreiben eines Leitfadens zur Impedanzspektroskopie für zukünftige Stundenten."
+      "Schreiben eines Leitfadens zur Impedanzspektroskopie für zukünftige Stundenten.",
     ],
-    imagepath: "./Pictures/NOTIZ.jpg"
+    imagepath: "./Pictures/NOTIZ.jpg",
   },
   Bachelorthesis: {
     id: 1,
@@ -150,9 +150,9 @@ export const projects = {
       "Herstellung und Untersuchung von Metalloxid-Gassensoren mit chemischer Zugabe von Additiven.",
       "Untersuchungen zur Selektivität der Gassensoren in Bezug auf Herstellung und katalytische Effekte.",
       "Durchführen von Messreihen mit den Entwickelten Prototypen.",
-      "Auswertung der Ergebnisse und Ermittlung neuer Erkenntnisse auf der Grundlage schon vorhandener Theorie."
+      "Auswertung der Ergebnisse und Ermittlung neuer Erkenntnisse auf der Grundlage schon vorhandener Theorie.",
     ],
-    imagepath: "./Pictures/GAS.jpg"
+    imagepath: "./Pictures/GAS.jpg",
   },
   Studium: {
     id: 0,
@@ -163,10 +163,26 @@ export const projects = {
       "Einarbeitung in die Grundlagen des Explosionsschutzes (EX).",
       "Planung, Aufbau und Durchführung von Temperaturmessungen zur EX-Sicherheit.",
       "Auswertung von Messreihen, sowie Diskussion und Empfehlung.",
-      "Dokumentation der Ergebnisse."
+      "Dokumentation der Ergebnisse.",
     ],
-    imagepath: "./Pictures/EX.png"
-  }
+    imagepath: "./Pictures/EX.png",
+  },
+};
+
+export const products = {
+  Zeiterfassung: {
+    id: 0,
+    title: "www.teufel-time-tracking.com",
+    date: "02/2020 – dato",
+    company: "Teufel-Engineering",
+    activities: [
+      "Arbeitszeiterfassung für Mitarbeiter und Unternehmer.",
+      "Urlaubsplanung.",
+      "Projektmanagement.",
+      "Auswertung des projektspezifischen Aufwands.",
+    ],
+    imagepath: "./Pictures/EX.png",
+  },
 };
 
 export const vistenkarteVorne = [
@@ -178,14 +194,14 @@ export const vistenkarteVorne = [
       "Machbarkeitsstudien / Messdatenanalyse",
       "Programmierung von Mikrocontrollern",
       "Entwerfen von Platinen / analoge/digitale Schaltungen",
-      "Bau vom Prototyp bis zur Serie"
+      "Bau vom Prototyp bis zur Serie",
     ],
     services2: [
       "Frontends mit modernen Technologien (ReactJS + Typescript)",
       "Programmieren von REST-APIs (PHP / ExpressJS)",
-      "Datenbanken - SQL, mongoDB, lowDB"
-    ]
-  }
+      "Datenbanken - SQL, mongoDB, lowDB",
+    ],
+  },
 ];
 
 export const vistenkarteHinten = [
@@ -196,7 +212,7 @@ export const vistenkarteHinten = [
       "Master of Science - University of Applied Sciences - Karlsruhe",
       "Bachelor of Engineering - University of Applied Sciences - Karlsruhe",
       "Ausgebildeter Elektroniker - Energie und Gebäudetechnik",
-      "Kenntnisse in - Matlab/C++/Ansys/Java/node/ Javascript/PHP/Python"
-    ]
-  }
+      "Kenntnisse in - Matlab/C++/Ansys/Java/node/ Javascript/PHP/Python",
+    ],
+  },
 ];

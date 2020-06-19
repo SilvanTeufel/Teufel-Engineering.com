@@ -122,8 +122,18 @@
   margin-right: auto;
   margin-top: auto;
   margin-bottom: auto;
-  font-size: large;
+  font-size: 1em;
   text-align: center;
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+
+.further_text {
+  font-size: 1em;
+  margin-left: 0em;
+  margin-right: 0em;
+  margin-top: -0.25em;
+  margin-bottom: -0.25em;
 }
 
 .textbox:hover {
@@ -134,4 +144,33 @@
 
 .backgroundtransparent {
   background-color: grey;
+}
+
+@media only screen and (max-width: 600px) {
+  .textbox {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+    font-size: 0.7em;
+    text-align: center;
+    margin-top: 5%;
+    margin-bottom: 5%;
+  }
+
+  .further_text {
+    font-size: 0.7em;
+  }
+
+  .textnotizH {
+    color: lightgray;
+    margin-left: 4px;
+    font-size: 0.7em;
+  }
+
+  .textnotizV {
+    color: lightgray;
+    margin-left: -12px;
+    font-size: 0.7em;
+  }
 }

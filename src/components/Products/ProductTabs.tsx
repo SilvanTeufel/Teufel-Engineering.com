@@ -1,6 +1,6 @@
 import * as React from "react";
-import { projects } from "../Daten";
-import Project from "./Project";
+import { products } from "../Daten";
+import Product from "./Product";
 import "../css/Fade.css";
 import "../css/Cursor.css";
 //import { CarouselIndicators, NavLink } from "reactstrap";
@@ -24,7 +24,10 @@ interface MyComponentStates {
   toggleNavbarNow: boolean;
 }
 
-class ProjectTabs extends React.Component<MyComponentProps, MyComponentStates> {
+export default class ProductTabs extends React.Component<
+  MyComponentProps,
+  MyComponentStates
+> {
   constructor(props: any) {
     super(props);
     this.state = {
@@ -36,18 +39,7 @@ class ProjectTabs extends React.Component<MyComponentProps, MyComponentStates> {
       screenWidth: undefined,
       coverflowquantity: 1,
       navlink: {
-        Studium: false,
-        Bachelorthesis: false,
-        Masterthesis: false,
-        Spektroskopie: false,
-        Temperatur: false,
-        Sensorik: true,
-        React: false,
-        Typescript: false,
-        "E-Bike": false,
-        SQL: false,
-        Mikrocontroller: false,
-        Angular: false,
+        Zeiterfassung: false,
       },
       projectTitles: undefined,
       toggleNavbarNow: false,
@@ -56,7 +48,7 @@ class ProjectTabs extends React.Component<MyComponentProps, MyComponentStates> {
   }
 
   componentDidMount() {
-    this.togglenavlinkto("Sensorik");
+    this.togglenavlinkto("Zeiterfassung");
   }
 
   componentWillReceiveProps() {
@@ -95,7 +87,7 @@ class ProjectTabs extends React.Component<MyComponentProps, MyComponentStates> {
         this.props.Key[0] === "Leistungen" ||
         !this.props.Key[1]
       ) {
-        this.togglenavlinkto("Sensorik");
+        this.togglenavlinkto("Zeiterfassung");
       }
     }
   };
@@ -111,9 +103,9 @@ class ProjectTabs extends React.Component<MyComponentProps, MyComponentStates> {
   createSingleProject = () => {
     const project = [];
 
-    for (var k in projects) {
-      var projectsV: any = projects;
-
+    for (var k in products) {
+      var productsV: any = products;
+      console.log(k);
       project.push(
         <div
           className={classNames({
@@ -121,7 +113,7 @@ class ProjectTabs extends React.Component<MyComponentProps, MyComponentStates> {
             "d-none": !this.state.navlink[k],
           })}
         >
-          <Project Data={projectsV[k]} />
+          <Product Data={productsV[k]} />
         </div>
       );
     }
@@ -158,7 +150,8 @@ class ProjectTabs extends React.Component<MyComponentProps, MyComponentStates> {
 
     let i = 0;
     for (var k in this.state.navlink) {
-      var projectsV: any = projects;
+      console.log(k);
+      var productsV: any = products;
       var z: string = String(i);
       //console.log(projectsV);
       projectsCarousel.push(
@@ -173,7 +166,7 @@ class ProjectTabs extends React.Component<MyComponentProps, MyComponentStates> {
           style={{ marginBottom: "5vh" }}
         >
           <div className="col-12">
-            <Project Data={projectsV[k]} />
+            <Product Data={productsV[k]} />
           </div>
         </div>
       );
@@ -256,7 +249,7 @@ class ProjectTabs extends React.Component<MyComponentProps, MyComponentStates> {
         id="carouselExampleIndicators"
         className="carousel slide"
         data-ride="carousel"
-        style={{ minHeight: "40vh" }}
+        style={{ minHeight: "20vh" }}
       >
         <ol className="carousel-indicators">
           {this.createIndicatorCarousel()}
@@ -282,5 +275,3 @@ class ProjectTabs extends React.Component<MyComponentProps, MyComponentStates> {
     );
   }
 }
-
-export default ProjectTabs;

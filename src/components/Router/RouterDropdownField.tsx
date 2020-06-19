@@ -36,15 +36,6 @@ class RouterDropdownField extends React.Component<
         <div className="dropdown-item dropdownelement text-left">
           <div className="row">
             <div className="col-12">
-              <img
-                src={LogoImage}
-                alt=""
-                className={classNames({
-                  "rounded float- left": true,
-                  rotatebuttonlogo: this.props.routerstructure.iconstate[key]
-                })}
-                style={{ opacity: 0.8, maxHeight: 38 }}
-              />
               {this.props.buttons[key]}
             </div>
           </div>
@@ -80,7 +71,7 @@ class RouterDropdownField extends React.Component<
               className={classNames({
                 "fas fa-chevron-left fa-1x": true,
                 rotaterighticondown: this.props.DropdownisOpen,
-                rotaterighticonleft: !this.props.DropdownisOpen
+                rotaterighticonleft: !this.props.DropdownisOpen,
               })}
               style={{ marginLeft: "2vw" }}
             ></i>
@@ -88,7 +79,7 @@ class RouterDropdownField extends React.Component<
               className={classNames({
                 "fas fa-chevron-left fa-1x": true,
                 rotaterighticondown: this.props.DropdownisOpen,
-                rotaterighticonleft: !this.props.DropdownisOpen
+                rotaterighticonleft: !this.props.DropdownisOpen,
               })}
               style={{ marginLeft: "2vw" }}
             ></i>
@@ -96,7 +87,7 @@ class RouterDropdownField extends React.Component<
               className={classNames({
                 "fas fa-chevron-left fa-1x": true,
                 rotaterighticondown: this.props.DropdownisOpen,
-                rotaterighticonleft: !this.props.DropdownisOpen
+                rotaterighticonleft: !this.props.DropdownisOpen,
               })}
               style={{ marginLeft: "2vw" }}
             ></i>
@@ -105,7 +96,7 @@ class RouterDropdownField extends React.Component<
         <div
           className={classNames({
             slidein: this.props.DropdownisOpen,
-            slideout: !this.props.DropdownisOpen
+            slideout: !this.props.DropdownisOpen,
           })}
           aria-labelledby="dropdownMenuButton"
         >
@@ -123,123 +114,3 @@ class RouterDropdownField extends React.Component<
 }
 
 export default RouterDropdownField;
-
-/*
-
-            <div className="row">
-              <div className="col">
-                <i
-                  className={classNames({
-                    "fas fa-arrow-right": true,
-                    rotatelefticondown: this.props.DropdownisOpen,
-                    rotatelefticonright: !this.props.DropdownisOpen
-                  })}
-                  style={{ marginLeft: "1vh" }}
-                ></i>
-              </div>
-            </div>
-            <div className="row">
-              <div className="col">
-                <i
-                  className={classNames({
-                    "fas fa-arrow-right": true,
-                    rotatelefticondown: this.props.DropdownisOpen,
-                    rotatelefticonright: !this.props.DropdownisOpen
-                  })}
-                  style={{ marginLeft: "1vh" }}
-                ></i>
-              </div>
-            </div>
-            <div className="row">
-              <div className="col">
-                <i
-                  className={classNames({
-                    "fas fa-arrow-right": true,
-                    rotatelefticondown: this.props.DropdownisOpen,
-                    rotatelefticonright: !this.props.DropdownisOpen
-                  })}
-                  style={{ marginLeft: "1vh" }}
-                ></i>
-              </div>
-            </div>
-          </div>
-          <div className="col-md-1 col-4">
-            <div className="row">
-              <div className="col">
-                <img
-                  src={LogoImageBlack}
-                  alt=""
-                  className={classNames({
-                    "rounded float-left": true,
-                    rotatebuttonlogo: this.props.DropdownisOpen
-                  })}
-                  style={{ maxHeight: 25 }}
-                  onClick={this.props.toggleDropDown}
-                />
-              </div>
-            </div>
-            <div className="row ">
-              <div className="col">
-                <img
-                  src={LogoImageBlack}
-                  alt=""
-                  className={classNames({
-                    "rounded float-left": true,
-                    rotatebuttonlogo: this.props.DropdownisOpen
-                  })}
-                  style={{ maxHeight: 25 }}
-                  onClick={this.props.toggleDropDown}
-                />
-              </div>
-            </div>
-            <div className="row ">
-              <div className="col">
-                <img
-                  src={LogoImageBlack}
-                  alt=""
-                  className={classNames({
-                    "rounded float-left": true,
-                    rotatebuttonlogo: this.props.DropdownisOpen
-                  })}
-                  style={{ maxHeight: 25 }}
-                  onClick={this.props.toggleDropDown}
-                />
-              </div>
-            </div>
-          </div>
-          <div className="col-md-1 col-4">
-            <div className="row">
-              <div className="col">
-                <i
-                  className={classNames({
-                    "fas fa-arrow-left": true,
-                    rotaterighticondown: this.props.DropdownisOpen,
-                    rotaterighticonleft: !this.props.DropdownisOpen
-                  })}
-                ></i>
-              </div>
-            </div>
-            <div className="row">
-              <div className="col">
-                <i
-                  className={classNames({
-                    "fas fa-arrow-left": true,
-                    rotaterighticondown: this.props.DropdownisOpen,
-                    rotaterighticonleft: !this.props.DropdownisOpen
-                  })}
-                ></i>
-              </div>
-            </div>
-            <div className="row">
-              <div className="col">
-                <i
-                  className={classNames({
-                    "fas fa-arrow-left": true,
-                    rotaterighticondown: this.props.DropdownisOpen,
-                    rotaterighticonleft: !this.props.DropdownisOpen
-                  })}
-                ></i>
-              </div>
-            </div>
-
-*/

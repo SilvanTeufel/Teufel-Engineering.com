@@ -11,6 +11,7 @@ import "../css/Cursor.css";
 var classNames = require("classnames");
 
 interface MyComponentStates {
+  interval: any;
   navlink: any;
   toggleNavbarNow: boolean;
 }
@@ -23,14 +24,19 @@ class Leistungen extends React.Component<MyComponentProps, MyComponentStates> {
   constructor(props: any) {
     super(props);
     this.state = {
+      interval: setInterval(() => this.togglenextnavlinkto(), 15000),
       navlink: {
         Messsysteme: false,
         Studien: false,
         Datenbanken: false,
-        Sonstiges: false
+        Sonstiges: false,
       },
-      toggleNavbarNow: false
+      toggleNavbarNow: false,
     };
+  }
+
+  componentWillUnmount() {
+    clearInterval(this.state.interval);
   }
 
   togglenavlinkto = (key: string) => {
@@ -43,6 +49,45 @@ class Leistungen extends React.Component<MyComponentProps, MyComponentStates> {
         navlink[key] = true;
       }
     }
+
+    this.setState({ navlink });
+  };
+
+  togglenextnavlinkto = () => {
+    const navlink = this.state.navlink;
+    let foundlink = false;
+    let setlink = false;
+    for (var Key in this.state.navlink) {
+      if (foundlink) {
+        navlink[Key] = true;
+        foundlink = false;
+        setlink = true;
+      }
+      if (this.state.navlink[Key] && !setlink) {
+        navlink[Key] = false;
+        foundlink = true;
+      }
+    }
+
+    this.setState({ navlink });
+  };
+
+  toggleprevlinkto = () => {
+    const navlink = this.state.navlink;
+    let foundlink = false;
+
+    let lastlink = "Messsysteme";
+    for (var Key in this.state.navlink) {
+      if (this.state.navlink[Key] && !foundlink) {
+        navlink[Key] = false;
+        foundlink = true;
+      } else if (!foundlink) {
+        lastlink = Key;
+      }
+    }
+    console.log(lastlink);
+
+    navlink[lastlink] = true;
     this.setState({ navlink });
   };
 
@@ -81,11 +126,11 @@ class Leistungen extends React.Component<MyComponentProps, MyComponentStates> {
     }
 
     tab.push(
-      <div>
+      <div style={{ marginBottom: "5vh" }}>
         <div
           className={classNames({
             fadein: this.state.navlink.Messsysteme,
-            "d-none": !this.state.navlink.Messsysteme
+            "d-none": !this.state.navlink.Messsysteme,
           })}
         >
           {<Measure />}
@@ -93,7 +138,7 @@ class Leistungen extends React.Component<MyComponentProps, MyComponentStates> {
         <div
           className={classNames({
             fadein: this.state.navlink.Studien,
-            "d-none": !this.state.navlink.Studien
+            "d-none": !this.state.navlink.Studien,
           })}
         >
           {<Study />}
@@ -101,7 +146,7 @@ class Leistungen extends React.Component<MyComponentProps, MyComponentStates> {
         <div
           className={classNames({
             fadein: this.state.navlink.Datenbanken,
-            "d-none": !this.state.navlink.Datenbanken
+            "d-none": !this.state.navlink.Datenbanken,
           })}
         >
           {<Database />}
@@ -109,7 +154,7 @@ class Leistungen extends React.Component<MyComponentProps, MyComponentStates> {
         <div
           className={classNames({
             fadein: this.state.navlink.Sonstiges,
-            "d-none": !this.state.navlink.Sonstiges
+            "d-none": !this.state.navlink.Sonstiges,
           })}
         >
           {<Further />}
@@ -120,84 +165,55 @@ class Leistungen extends React.Component<MyComponentProps, MyComponentStates> {
     return tab;
   };
 
+  createIndicatorCarousel = () => {
+    const indicators = [];
+    let i = 0;
+
+    for (var k in this.state.navlink) {
+      indicators.push(
+        <li
+          data-target="#carouselExampleIndicators"
+          data-slide-to={i}
+          className={classNames({
+            active: this.state.navlink[k],
+          })}
+        ></li>
+      );
+      i++;
+    }
+
+    return indicators;
+  };
+
   render() {
     this.toggleViaNavbar();
     return (
-      <div className="row">
-        <div className="col">
-          <div className="row">
-            <div className="col">
-              <br />
-            </div>
-          </div>
-          <div className="row">
-            <div className="col">
-              <ul className="nav nav-tabs">
-                <li
-                  className="nav-item cursor-pointer"
-                  onClick={() => this.togglenavlinkto("Messsysteme")}
-                >
-                  <div
-                    className={classNames({
-                      "nav-link": true,
-                      active: this.state.navlink.Messsysteme
-                    })}
-                  >
-                    <strong>Messsysteme</strong>
-                  </div>
-                </li>
-
-                <li
-                  className="nav-item cursor-pointer"
-                  onClick={() => this.togglenavlinkto("Studien")}
-                >
-                  <div
-                    className={classNames({
-                      "nav-link": true,
-                      active: this.state.navlink.Studien
-                    })}
-                  >
-                    <strong>Studien</strong>
-                  </div>
-                </li>
-                <li
-                  className="nav-item cursor-pointer"
-                  onClick={() => this.togglenavlinkto("Datenbanken")}
-                >
-                  <div
-                    className={classNames({
-                      "nav-link": true,
-                      active: this.state.navlink.Datenbanken
-                    })}
-                  >
-                    <strong>Datenbanken</strong>
-                  </div>
-                </li>
-                <li
-                  className="nav-item cursor-pointer"
-                  onClick={() => this.togglenavlinkto("Sonstiges")}
-                >
-                  <div
-                    className={classNames({
-                      "nav-link": true,
-                      active: this.state.navlink.Sonstiges
-                    })}
-                  >
-                    <strong>Sonstiges</strong>
-                  </div>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div className="row">
-            <div className="col-12">{this.switchNavTab()}</div>
-          </div>
-          <div className="row">
-            <div className="col">
-              <br />
-            </div>
-          </div>
-        </div>
+      <div
+        id="carouselExampleIndicators"
+        className="carousel slide"
+        data-ride="carousel"
+        style={{ minHeight: "70vh" }}
+      >
+        <ol className="carousel-indicators">
+          {this.createIndicatorCarousel()}
+        </ol>
+        <div className="carousel-inner">{this.switchNavTab()}</div>
+        <a className="carousel-control-prev" role="button" data-slide="prev">
+          <span
+            className="carousel-control-prev-icon cursor-pointer"
+            aria-hidden="true"
+            onClick={() => this.toggleprevlinkto()}
+          ></span>
+          <span className="sr-only">Previous</span>
+        </a>
+        <a className="carousel-control-next" role="button" data-slide="next">
+          <span
+            className="carousel-control-next-icon cursor-pointer"
+            aria-hidden="true"
+            onClick={() => this.togglenextnavlinkto()}
+          ></span>
+          <span className="sr-only">Next</span>
+        </a>
       </div>
     );
   }

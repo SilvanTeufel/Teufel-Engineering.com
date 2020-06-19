@@ -10,6 +10,8 @@ import Impressum from "../Footer/Impressum";
 import RouterDropdownField from "./RouterDropdownField";
 import "../css/Header.css";
 import "../css/Cursor.css";
+import "../css/Layout.css";
+var classNames = require("classnames");
 
 const LogoImage = require("../Pictures/LogoINV1.png");
 
@@ -26,17 +28,17 @@ class Router extends React.Component<{}, MyComponentState> {
       DropdownisOpen: true,
       redirectkeys: {
         Philosophie: {
-          General: false
+          General: false,
         },
         Leistungen: {
-          General: false
+          General: false,
         },
         Projekte: {
-          General: false
+          General: false,
         },
         Kontakt: {
-          General: false
-        }
+          General: false,
+        },
       },
       routerstructure: {
         navKeys: {
@@ -46,7 +48,7 @@ class Router extends React.Component<{}, MyComponentState> {
             Messsysteme: false,
             Studien: false,
             Datenbanken: false,
-            Sonstiges: false
+            Sonstiges: false,
           },
           Projekte: {
             General: false,
@@ -61,14 +63,15 @@ class Router extends React.Component<{}, MyComponentState> {
             "E-Bike": false,
             SQL: false,
             Mikrocontroller: false,
-            Angular: false
+            Angular: false,
           },
-          Kontakt: { General: false }
+          Applikationen: { General: false, Zeiterfassung: false },
+          Kontakt: { General: false },
         },
         footKeys: {
           Kontakt: false,
           Impressum: false,
-          Datenschutz: false
+          Datenschutz: false,
         },
         iconstate: {
           Philosophie: false,
@@ -89,9 +92,55 @@ class Router extends React.Component<{}, MyComponentState> {
           Typescript: false,
           "E-Bike": false,
           SQL: false,
-          Mikrocontroller: false
-        }
-      }
+          Mikrocontroller: false,
+          Applikationen: false,
+          Zeiterfassung: false,
+        },
+        icon: {
+          Philosophie: {
+            class: "fas fa-yin-yang fa-lg marginIconRight_0",
+          },
+          Leistungen: {
+            class: "fas fa-sitemap fa-lg marginIconRight_1",
+          },
+          Projekte: {
+            class: "fas fa-tasks fa-lg marginIconRight_0",
+          },
+          Messsysteme: {
+            class: "fas fa-paint-brush fa-lg",
+          },
+          Applikationen: {
+            class: "fas fa-cogs fa-lg marginIconRight_1",
+          },
+          Studien: {
+            class: "fas fa-sun fa-lg",
+          },
+          Datenbanken: {
+            class: "fas fa-user fa-lg",
+          },
+          Sonstiges: {
+            class: "fas fa-phone fa-lg",
+          },
+          Studium: { class: "fas fa-moon fa-lg" },
+          Zeiterfassung: { class: "fas fa-moon fa-lg" },
+          Bachelorthesis: { class: "fas fa-moon fa-lg" },
+          Masterthesis: { class: "fas fa-moon fa-lg" },
+          Spektroskopie: { class: "fas fa-moon fa-lg" },
+          Temperatur: { class: "fas fa-moon fa-lg" },
+          Sensorik: { class: "fas fa-moon fa-lg" },
+          React: { class: "fas fa-moon fa-lg" },
+          Typescript: { class: "fas fa-moon fa-lg" },
+          "E-Bike": { class: "fas fa-moon fa-lg" },
+          SQL: { class: "fas fa-moon fa-lg" },
+          Mikrocontroller: { class: "fas fa-moon fa-lg" },
+          Kontakt: {
+            class: "fas fa-id-card fa-lg marginIconRight_1",
+          },
+          General: {
+            class: "fas fa-cut fa-lg",
+          },
+        },
+      },
     };
   }
 
@@ -100,7 +149,7 @@ class Router extends React.Component<{}, MyComponentState> {
   };
 
   closeDropDown = () => {
-    if (this.state.DropdownisOpen) {
+    if (this.state.DropdownisOpen && window.innerWidth <= 1200) {
       this.setState({ DropdownisOpen: false });
     }
   };
@@ -148,27 +197,49 @@ class Router extends React.Component<{}, MyComponentState> {
     return buttons;
   };
 
+  createIcon = (iconClass: string, rotate: boolean) => {
+    const icon = [];
+
+    icon.push(
+      <i
+        className={classNames({
+          [iconClass]: true,
+          "fa-spin": rotate,
+        })}
+      ></i>
+    );
+
+    return icon;
+  };
+
   createScrollButton = (key0: string) => {
     const button = [];
-    button.push(
-      <Link
-        to={key0}
-        spy={true}
-        smooth={true}
-        offset={-120}
-        duration={500}
-        delay={200}
-      >
-        <button
-          type="button"
-          className="btn btn-outline-light"
-          style={{ minWidth: 110 }}
-          onClick={() => this.redirectToLink(key0, "General")}
+
+    if (this.state.routerstructure.icon[key0]) {
+      button.push(
+        <Link
+          to={key0}
+          spy={true}
+          smooth={true}
+          offset={-120}
+          duration={500}
+          delay={200}
         >
-          {key0}
-        </button>
-      </Link>
-    );
+          {this.createIcon(
+            this.state.routerstructure.icon[key0].class,
+            this.state.routerstructure.iconstate[key0]
+          )}
+          <button
+            type="button"
+            className="btn btn-outline-light"
+            style={{ minWidth: 110 }}
+            onClick={() => this.redirectToLink(key0, "General")}
+          >
+            {key0}
+          </button>
+        </Link>
+      );
+    }
 
     if (this.state && this.state.routerstructure) {
       button.push(
@@ -210,6 +281,15 @@ class Router extends React.Component<{}, MyComponentState> {
         duration={500}
         delay={200}
       >
+        <img
+          src={LogoImage}
+          alt=""
+          className={classNames({
+            "rounded float- left": true,
+            rotatebuttonlogo: this.state.routerstructure.iconstate[key1],
+          })}
+          style={{ opacity: 0.8, maxHeight: 38 }}
+        />{" "}
         <button
           type="button"
           className="btn btn-outline-light"
@@ -291,7 +371,7 @@ class Router extends React.Component<{}, MyComponentState> {
       <div
         className="row text-light header"
         style={{
-          position: "relative"
+          position: "relative",
         }}
       >
         <div className="col-4 text-right align-items-bottom">

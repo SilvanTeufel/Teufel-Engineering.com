@@ -26,18 +26,7 @@ class NavbarCollapse extends React.Component<
       if (key !== "General")
         buttons.push(
           <div className="row text-center" style={{ marginTop: "1vh" }}>
-            <div className="col-12">
-              <img
-                src={LogoImage}
-                alt=""
-                className={classNames({
-                  "rounded float- left": true,
-                  rotatebuttonlogo: this.props.getIconState(key)
-                })}
-                style={{ opacity: 0.8, maxHeight: 32 }}
-              />
-              {this.props.buttons[key]}
-            </div>
+            <div className="col-12">{this.props.buttons[key]}</div>
           </div>
         );
     }
