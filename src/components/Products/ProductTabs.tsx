@@ -105,7 +105,7 @@ export default class ProductTabs extends React.Component<
 
     for (var k in products) {
       var productsV: any = products;
-      console.log(k);
+
       project.push(
         <div
           className={classNames({
@@ -150,10 +150,9 @@ export default class ProductTabs extends React.Component<
 
     let i = 0;
     for (var k in this.state.navlink) {
-      console.log(k);
+
       var productsV: any = products;
       var z: string = String(i);
-      //console.log(projectsV);
       projectsCarousel.push(
         <div
           id={z}
@@ -198,16 +197,13 @@ export default class ProductTabs extends React.Component<
 
   nextSlide = (direction: boolean) => {
     var setNext = false;
-    console.log("nextSlide");
 
     var navlink = this.state.navlink;
 
     let i = 0;
     let z = 0;
     for (var key in navlink) {
-      console.log(key);
-      console.log(navlink[key]);
-      console.log(i);
+
       if (this.state.navlink[key]) {
         navlink[key] = false;
         this.setState({ navlink });
@@ -215,10 +211,6 @@ export default class ProductTabs extends React.Component<
       }
       i++;
     }
-
-    console.log(z);
-    console.log(i);
-    console.log(direction);
 
     if (z == i - 1 && direction) {
       z = -1;
@@ -237,8 +229,6 @@ export default class ProductTabs extends React.Component<
       }
       i++;
     }
-
-    console.log(this.state.navlink);
   };
 
   render() {

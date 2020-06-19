@@ -160,7 +160,6 @@ class ProjectTabs extends React.Component<MyComponentProps, MyComponentStates> {
     for (var k in this.state.navlink) {
       var projectsV: any = projects;
       var z: string = String(i);
-      //console.log(projectsV);
       projectsCarousel.push(
         <div
           id={z}
@@ -204,17 +203,11 @@ class ProjectTabs extends React.Component<MyComponentProps, MyComponentStates> {
   };
 
   nextSlide = (direction: boolean) => {
-    var setNext = false;
-    console.log("nextSlide");
-
     var navlink = this.state.navlink;
 
     let i = 0;
     let z = 0;
     for (var key in navlink) {
-      console.log(key);
-      console.log(navlink[key]);
-      console.log(i);
       if (this.state.navlink[key]) {
         navlink[key] = false;
         this.setState({ navlink });
@@ -222,10 +215,6 @@ class ProjectTabs extends React.Component<MyComponentProps, MyComponentStates> {
       }
       i++;
     }
-
-    console.log(z);
-    console.log(i);
-    console.log(direction);
 
     if (z == i - 1 && direction) {
       z = -1;
@@ -244,8 +233,6 @@ class ProjectTabs extends React.Component<MyComponentProps, MyComponentStates> {
       }
       i++;
     }
-
-    console.log(this.state.navlink);
   };
 
   render() {

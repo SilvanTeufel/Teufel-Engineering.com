@@ -85,7 +85,6 @@ class Leistungen extends React.Component<MyComponentProps, MyComponentStates> {
         lastlink = Key;
       }
     }
-    console.log(lastlink);
 
     navlink[lastlink] = true;
     this.setState({ navlink });
