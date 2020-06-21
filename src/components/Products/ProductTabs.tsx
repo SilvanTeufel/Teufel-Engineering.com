@@ -39,7 +39,7 @@ export default class ProductTabs extends React.Component<
       screenWidth: undefined,
       coverflowquantity: 1,
       navlink: {
-        Zeiterfassung: false,
+        Zeiterfassung: true,
       },
       projectTitles: undefined,
       toggleNavbarNow: false,
@@ -80,11 +80,11 @@ export default class ProductTabs extends React.Component<
 
   toggleViaNavbar = () => {
     if (this.state.toggleNavbarNow) {
-      this.togglenavlinkto(this.props.Key[1]);
+      //this.togglenavlinkto(this.props.Key[1]);
       this.setState({ toggleNavbarNow: false });
       if (
         this.props.Key[1] === "General" ||
-        this.props.Key[0] === "Leistungen" ||
+        this.props.Key[0] === "Applikationen" ||
         !this.props.Key[1]
       ) {
         this.togglenavlinkto("Zeiterfassung");
@@ -150,7 +150,6 @@ export default class ProductTabs extends React.Component<
 
     let i = 0;
     for (var k in this.state.navlink) {
-
       var productsV: any = products;
       var z: string = String(i);
       projectsCarousel.push(
@@ -203,7 +202,6 @@ export default class ProductTabs extends React.Component<
     let i = 0;
     let z = 0;
     for (var key in navlink) {
-
       if (this.state.navlink[key]) {
         navlink[key] = false;
         this.setState({ navlink });

@@ -21,7 +21,7 @@ interface MyComponentState {
   routerstructure: any;
 }
 
-class Router extends React.Component<{}, MyComponentState> {
+export default class Router extends React.Component<{}, MyComponentState> {
   constructor(props: any) {
     super(props);
     this.state = {
@@ -78,23 +78,7 @@ class Router extends React.Component<{}, MyComponentState> {
           Leistungen: false,
           Projekte: false,
           Kontakt: false,
-          Messsysteme: false,
-          Studien: false,
-          Datenbanken: false,
-          Sonstiges: false,
-          Studium: false,
-          Bachelorthesis: false,
-          Masterthesis: false,
-          Spektroskopie: false,
-          Temperatur: false,
-          Sensorik: false,
-          React: false,
-          Typescript: false,
-          "E-Bike": false,
-          SQL: false,
-          Mikrocontroller: false,
           Applikationen: false,
-          Zeiterfassung: false,
         },
         icon: {
           Philosophie: {
@@ -121,18 +105,6 @@ class Router extends React.Component<{}, MyComponentState> {
           Sonstiges: {
             class: "fas fa-phone fa-lg",
           },
-          Studium: { class: "fas fa-moon fa-lg" },
-          Zeiterfassung: { class: "fas fa-moon fa-lg" },
-          Bachelorthesis: { class: "fas fa-moon fa-lg" },
-          Masterthesis: { class: "fas fa-moon fa-lg" },
-          Spektroskopie: { class: "fas fa-moon fa-lg" },
-          Temperatur: { class: "fas fa-moon fa-lg" },
-          Sensorik: { class: "fas fa-moon fa-lg" },
-          React: { class: "fas fa-moon fa-lg" },
-          Typescript: { class: "fas fa-moon fa-lg" },
-          "E-Bike": { class: "fas fa-moon fa-lg" },
-          SQL: { class: "fas fa-moon fa-lg" },
-          Mikrocontroller: { class: "fas fa-moon fa-lg" },
           Kontakt: {
             class: "fas fa-id-card fa-lg marginIconRight_1",
           },
@@ -204,7 +176,7 @@ class Router extends React.Component<{}, MyComponentState> {
       <i
         className={classNames({
           [iconClass]: true,
-          "fa-spin": rotate,
+          "fa-pulse": rotate,
         })}
       ></i>
     );
@@ -281,15 +253,13 @@ class Router extends React.Component<{}, MyComponentState> {
         duration={500}
         delay={200}
       >
-        <img
-          src={LogoImage}
-          alt=""
+        <i
           className={classNames({
-            "rounded float- left": true,
-            rotatebuttonlogo: this.state.routerstructure.iconstate[key1],
+            "fas fa-angle-double-right": true,
+            "fa-pulse": this.state.routerstructure.iconstate[key1],
           })}
-          style={{ opacity: 0.8, maxHeight: 38 }}
-        />{" "}
+          style={{ paddingRight: "1em" }}
+        ></i>
         <button
           type="button"
           className="btn btn-outline-light"
@@ -431,5 +401,3 @@ class Router extends React.Component<{}, MyComponentState> {
     );
   }
 }
-
-export default Router;
