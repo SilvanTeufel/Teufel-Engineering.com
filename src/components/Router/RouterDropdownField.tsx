@@ -35,9 +35,7 @@ class RouterDropdownField extends React.Component<
       row.push(
         <div className="dropdown-item dropdownelement text-left">
           <div className="row">
-            <div className="col-12">
-              {this.props.buttons[key]}
-            </div>
+            <div className="col-12">{this.props.buttons[key]}</div>
           </div>
         </div>
       );

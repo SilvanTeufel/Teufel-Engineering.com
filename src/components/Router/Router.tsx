@@ -120,6 +120,12 @@ export default class Router extends React.Component<{}, MyComponentState> {
     this.setState({ DropdownisOpen: !this.state.DropdownisOpen });
   };
 
+  closeIfMobile = () => {
+    if (window.innerWidth <= 1200) {
+      this.setState({ DropdownisOpen: false });
+    }
+  };
+
   closeDropDown = () => {
     if (this.state.DropdownisOpen && window.innerWidth <= 1200) {
       this.setState({ DropdownisOpen: false });
@@ -138,6 +144,7 @@ export default class Router extends React.Component<{}, MyComponentState> {
     const routerstructure = this.state.routerstructure;
     routerstructure.navKeys[key0][key1] = true;
     this.toggleIconState(key0, key1);
+    this.closeIfMobile();
     this.setState({ routerstructure });
   };
 

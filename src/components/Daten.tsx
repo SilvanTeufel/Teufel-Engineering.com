@@ -218,7 +218,7 @@ export const vistenkarteHinten = [
       "KiCad, Atmelstudio, AVR-µController, STM-µController",
     ],
     footer1:
-      "Durch Einarbeitung in aktuelle Technologien werden immer moderne Produkte zu entwickelt.",
+      "Durch Einarbeitung in aktuelle Technologien werden immer moderne Produkte entwickelt.",
     title2: "Qualifikationen:",
     qualifications2: ["Master of Science", "Bachelor of Engineering"],
     footer2: "Karlsruhe - University of Applied Sciences",
