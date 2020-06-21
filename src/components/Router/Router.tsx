@@ -331,7 +331,7 @@ export default class Router extends React.Component<{}, MyComponentState> {
             >
               Teufel Engineering
             </h1>
-            <h1 className="cursor-pointer d-lg-none">Teufel Engineering</h1>
+            <h2 className="cursor-pointer d-lg-none">Teufel Engineering</h2>
             <h3 className="d-none d-lg-block cursor-pointer">
               Silvan Teufel - Master of Science
             </h3>
