@@ -26,10 +26,10 @@ class Leistungen extends React.Component<MyComponentProps, MyComponentStates> {
     this.state = {
       interval: setInterval(() => this.togglenextnavlinkto(), 30000),
       navlink: {
+        Sonstiges: false,
         Messsysteme: false,
         Studien: false,
         Datenbanken: false,
-        Sonstiges: false,
       },
       toggleNavbarNow: false,
     };
@@ -95,7 +95,7 @@ class Leistungen extends React.Component<MyComponentProps, MyComponentStates> {
       this.togglenavlinkto(this.props.Key[1]);
       this.setState({ toggleNavbarNow: false });
       if (this.props.Key[1] === "General") {
-        this.togglenavlinkto("Sensorik");
+        this.togglenavlinkto("Sonstiges");
       }
     }
   };

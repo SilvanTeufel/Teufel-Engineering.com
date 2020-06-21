@@ -45,10 +45,10 @@ export default class Router extends React.Component<{}, MyComponentState> {
           Philosophie: { General: false },
           Leistungen: {
             General: false,
+            Sonstiges: false,
             Messsysteme: false,
             Studien: false,
             Datenbanken: false,
-            Sonstiges: false,
           },
           Projekte: {
             General: false,
@@ -309,13 +309,13 @@ export default class Router extends React.Component<{}, MyComponentState> {
               routerstructure={this.state.routerstructure}
             />
           </div>
-          <div className="col-lg-2 col-1 d-none d-md-block" />
-          <div className="col-lg-1 col-3 text-left">
+          <div className="col-lg-1 col-1 d-none d-md-block" />
+          <div className="col-lg-2 col-3 text-left">
             <img
               src={LogoImage}
               alt=""
               className="rounded float-left d-none d-lg-block"
-              style={{ opacity: 0.8, maxHeight: 150 }}
+              style={{ opacity: 0.8, maxHeight: 150, marginLeft: "7vw" }}
             />
             <img
               src={LogoImage}
