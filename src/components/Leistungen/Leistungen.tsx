@@ -24,7 +24,7 @@ class Leistungen extends React.Component<MyComponentProps, MyComponentStates> {
   constructor(props: any) {
     super(props);
     this.state = {
-      interval: setInterval(() => this.togglenextnavlinkto(), 150000),
+      interval: setInterval(() => this.togglenextnavlinkto(), 30000),
       navlink: {
         Messsysteme: false,
         Studien: false,
