@@ -12,10 +12,10 @@ class Philosophie extends React.Component<{}, {}> {
 
   render() {
     return (
-      <div className="row align-items-center">
+      <div className="row align-items-center margintop marginbottom">
         <div className="col-md"></div>
         <div className="col-lg-6  col-12 text-left">
-          <h4 className="cursor-pointer-invert" style={{ marginTop: "1vh" }}>
+          <h5 className="cursor-pointer-invert">
             Als freiberuflicher Entwickler habe ich Herausforderungen niemals
             gescheut, weshalb ich, sowohl im Hardwarebereich (Entwerfen von
             Platinen, Filtern, Messdatenanalyse, usw.) als auch im
@@ -26,7 +26,7 @@ class Philosophie extends React.Component<{}, {}> {
             Courage und unkonventionelles Denken sind die Werkzeuge, mit denen
             ich arbeite. Falls Sie diese Werte ebenfalls schätzen, würde es mich
             freuen mit Ihnen zusammenzuarbeiten.
-          </h4>
+          </h5>
         </div>
         <div className="col-lg-5  col-12 radarImage">
           <Radar

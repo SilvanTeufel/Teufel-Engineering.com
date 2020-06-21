@@ -22,7 +22,7 @@ class Kontakt extends React.Component<{}, MyComponentStates> {
       formularI: undefined,
       showPopup: false,
       popuptext: "",
-      DSGVOaccepted: false
+      DSGVOaccepted: false,
     };
   }
 
@@ -111,13 +111,13 @@ class Kontakt extends React.Component<{}, MyComponentStates> {
           if (data.status === 200) {
             this.setState({
               popuptext:
-                "Ihre Nachricht wurde an info@teufel-engineering.com übermittelt."
+                "Ihre Nachricht wurde an info@teufel-engineering.com übermittelt.",
             });
             this.triggerPopup();
           } else {
             this.setState({
               popuptext:
-                "Ihr Nachricht wurde eventuell nicht übermittelt. Versuchen sie es erneut oder schreiben sie direkt an info@teufel-engineering.com."
+                "Ihr Nachricht wurde eventuell nicht übermittelt. Versuchen sie es erneut oder schreiben sie direkt an info@teufel-engineering.com.",
             });
             this.triggerPopup();
           }
@@ -125,14 +125,14 @@ class Kontakt extends React.Component<{}, MyComponentStates> {
         .catch((err: any) => {
           this.setState({
             popuptext:
-              "Ein Fehler ist aufgetreten. Versuchen sie es erneut oder schreiben sie direkt an info@teufel-engineering.com."
+              "Ein Fehler ist aufgetreten. Versuchen sie es erneut oder schreiben sie direkt an info@teufel-engineering.com.",
           });
           this.triggerPopup();
         });
     } else {
       this.setState({
         popuptext:
-          "Sie müssen die DSGVO akzeptieren um eine Nachricht zu versenden."
+          "Sie müssen die DSGVO akzeptieren um eine Nachricht zu versenden.",
       });
       this.triggerPopup();
     }
@@ -225,6 +225,7 @@ class Kontakt extends React.Component<{}, MyComponentStates> {
               <br />
               <a
                 href={"https://github.com/SilvanTeufel"}
+                target="_blank"
                 style={{ color: "black" }}
               >
                 https://github.com/SilvanTeufel
@@ -232,6 +233,7 @@ class Kontakt extends React.Component<{}, MyComponentStates> {
               <br />
             </p>
           </div>
+          <div className="col-lg-2 col-12"></div>
           <div className="col-lg-4 col-0">
             <img
               src={Silvan}
@@ -239,12 +241,11 @@ class Kontakt extends React.Component<{}, MyComponentStates> {
               className="rounded float-left kontaktimage"
               style={{
                 maxHeight: 200,
-                border: "2px solid grey"
+                border: "2px solid grey",
               }}
             />
           </div>
-          <div className="col-lg-3 col-12"></div>
-          <div className="col-lg-1 col-0" />
+          <div className="col-lg-2 col-0" />
         </div>
         <div className="row text-left align-items-center">
           <div className="col ">

@@ -193,7 +193,7 @@ export default class Router extends React.Component<{}, MyComponentState> {
           to={key0}
           spy={true}
           smooth={true}
-          offset={-120}
+          offset={-160}
           duration={500}
           delay={200}
         >
@@ -249,7 +249,7 @@ export default class Router extends React.Component<{}, MyComponentState> {
         to={key0}
         spy={true}
         smooth={true}
-        offset={-120}
+        offset={-160}
         duration={500}
         delay={200}
       >
@@ -297,10 +297,11 @@ export default class Router extends React.Component<{}, MyComponentState> {
 
   createHeader = () => {
     const header = [];
+
     if (this.state && this.state.routerstructure) {
       header.push(
         <div className="row align-items-center text-left header">
-          <div className="col-md-2 col-3 align-items-center">
+          <div className="col-lg-2 col-2 align-items-center">
             <RouterDropdownField
               buttons={this.createScrollButtonArray()}
               toggleDropDown={() => this.toggleDropDown()}
@@ -308,22 +309,57 @@ export default class Router extends React.Component<{}, MyComponentState> {
               routerstructure={this.state.routerstructure}
             />
           </div>
-          <div className="col-md-2 col-1 d-none d-md-block" />
-          <div className="col-md-1 col-3 text-left">
+          <div className="col-lg-2 col-1 d-none d-md-block" />
+          <div className="col-lg-1 col-3 text-left">
             <img
               src={LogoImage}
               alt=""
-              className="rounded float-left"
+              className="rounded float-left d-none d-lg-block"
+              style={{ opacity: 0.8, maxHeight: 150 }}
+            />
+            <img
+              src={LogoImage}
+              alt=""
+              className="rounded float-left d-lg-none"
               style={{ opacity: 0.8, maxHeight: 100 }}
             />
           </div>
-          <div className="col-md-5 col-3 text-left">
-            <h2 className="cursor-pointer">Teufel Engineering</h2>
-            <h6 className="d-none d-md-block cursor-pointer">
+          <div className="col-lg-5 col-4 text-left">
+            <h1
+              className="cursor-pointer d-none d-lg-block"
+              style={{ fontSize: "4em" }}
+            >
+              Teufel Engineering
+            </h1>
+            <h1 className="cursor-pointer d-lg-none">Teufel Engineering</h1>
+            <h3 className="d-none d-lg-block cursor-pointer">
               Silvan Teufel - Master of Science
-            </h6>
+            </h3>
           </div>
-          <div className="col-md-3 col-1" />
+          <div className="col-lg-2 col-1 text-left">
+            <p className="d-none d-lg-block">Kontaktieren Sie mich: </p>
+            <a
+              className="text-dark margin_mail"
+              href={"mailto:info@teufel-engineering.com"}
+              target="_blank"
+            >
+              <i className="fas fa-envelope-square fa-2x"></i>
+            </a>
+            <a
+              className="text-dark margin_phone"
+              href={"tel:01605170640"}
+              target="_blank"
+            >
+              <i className="fas fa-phone-square fa-2x"></i>
+            </a>
+            <a
+              className="text-dark margin_whatsapp"
+              href={"https://wa.me/01605170640"}
+              target="_blank"
+            >
+              <i className="fab fa-whatsapp-square fa-2x"></i>
+            </a>
+          </div>
         </div>
       );
     }

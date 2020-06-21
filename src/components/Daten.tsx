@@ -189,30 +189,38 @@ export const vistenkarteVorne = [
   {
     id: 1,
     title1: "Elektronik/Sensorik:",
-    title2: "Informatik:",
     services1: [
-      "Machbarkeitsstudien / Messdatenanalyse",
+      "EMV-gerechtes Platinendesign",
       "Programmierung von Mikrocontrollern",
-      "Entwerfen von Platinen / analoge/digitale Schaltungen",
-      "Bau vom Prototyp bis zur Serie",
+      "Entwickeln von browserbasierten GUIs zur Konfiguration",
+      "Messdatenanalyse",
+      "Machbarkeitsstudien",
     ],
+    footer1: "Von der Motorsteuerung bis zum Labormessplatz.",
+    title2: "Informatik:",
     services2: [
-      "Frontends mit modernen Technologien (ReactJS + Typescript)",
-      "Programmieren von REST-APIs (PHP / ExpressJS)",
-      "Datenbanken - SQL, mongoDB, lowDB",
+      "Applikationen für Browser, Tablet und Smartphone",
+      "Anwendungssoftware zur Prozessbewältigung.",
+      "Integration und Weiterentwicklung bestehender Anwendungen",
     ],
+    footer2: "Von der Unternehmenswebseite bis zur Prozessdigitalisierung.",
   },
 ];
 
 export const vistenkarteHinten = [
   {
     id: 1,
-    title: "Qualifikationen:",
-    qualifications: [
-      "Master of Science - University of Applied Sciences - Karlsruhe",
-      "Bachelor of Engineering - University of Applied Sciences - Karlsruhe",
-      "Ausgebildeter Elektroniker - Energie und Gebäudetechnik",
-      "Kenntnisse in - Matlab/C++/Ansys/Java/node/ Javascript/PHP/Python",
+    title1: "Technologien:",
+    qualifications1: [
+      "React, Typescript, Express, Docker",
+      "Javascript, Node, html, CSS ",
+      "C/C++, Python",
+      "KiCad, Atmelstudio, AVR-µController, STM-µController",
     ],
+    footer1:
+      "Durch Einarbeitung in aktuelle Technologien werden immer moderne Produkte zu entwickelt.",
+    title2: "Qualifikationen:",
+    qualifications2: ["Master of Science", "Bachelor of Engineering"],
+    footer2: "Karlsruhe - University of Applied Sciences",
   },
 ];

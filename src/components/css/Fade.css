@@ -17,7 +17,6 @@
 }
 
 /* Firefox < 16 */
-
 /* Safari, Chrome and Opera > 12.1 */
 @-webkit-keyframes fadein {
   from {
@@ -29,7 +28,6 @@
 }
 
 /* Internet Explorer */
-
 /* Opera < 12.1 */
 /* Not used atm */
 .fadeout {
@@ -51,7 +49,6 @@
 }
 
 /* Firefox < 16 */
-
 /* Safari, Chrome and Opera > 12.1 */
 @-webkit-keyframes fadeout {
   from {

@@ -24,7 +24,7 @@ class Leistungen extends React.Component<MyComponentProps, MyComponentStates> {
   constructor(props: any) {
     super(props);
     this.state = {
-      interval: setInterval(() => this.togglenextnavlinkto(), 15000),
+      interval: setInterval(() => this.togglenextnavlinkto(), 150000),
       navlink: {
         Messsysteme: false,
         Studien: false,
@@ -105,7 +105,7 @@ class Leistungen extends React.Component<MyComponentProps, MyComponentStates> {
   }
 
   componentDidMount() {
-    this.togglenavlinkto("Messsysteme");
+    this.togglenavlinkto("Sonstiges");
   }
 
   switchNavTab = () => {
@@ -126,6 +126,14 @@ class Leistungen extends React.Component<MyComponentProps, MyComponentStates> {
 
     tab.push(
       <div style={{ marginBottom: "5vh" }}>
+        <div
+          className={classNames({
+            fadein: this.state.navlink.Sonstiges,
+            "d-none": !this.state.navlink.Sonstiges,
+          })}
+        >
+          {<Further />}
+        </div>
         <div
           className={classNames({
             fadein: this.state.navlink.Messsysteme,
@@ -149,14 +157,6 @@ class Leistungen extends React.Component<MyComponentProps, MyComponentStates> {
           })}
         >
           {<Database />}
-        </div>
-        <div
-          className={classNames({
-            fadein: this.state.navlink.Sonstiges,
-            "d-none": !this.state.navlink.Sonstiges,
-          })}
-        >
-          {<Further />}
         </div>
       </div>
     );
@@ -189,7 +189,7 @@ class Leistungen extends React.Component<MyComponentProps, MyComponentStates> {
     return (
       <div
         id="carouselExampleIndicators"
-        className="carousel slide"
+        className="slide"
         data-ride="carousel"
         style={{ minHeight: "70vh" }}
       >

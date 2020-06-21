@@ -9,12 +9,7 @@ class Further extends React.Component<{}, {}> {
   createCarouselText1 = () => {
     const text = [];
     const text1 = [];
-    text1.push(
-      <h4 className="font-weight-bold text-left margintop">
-        {vistenkarteVorne[0].title1}
-      </h4>
-    );
-    text1.push(<br />);
+
     for (let i = 0; i < vistenkarteVorne[0].services1.length; i++) {
       text1.push(
         <p className="text-left further_text">
@@ -24,10 +19,14 @@ class Further extends React.Component<{}, {}> {
     }
     text1.push(<br />);
     text.push(
-      <div className="row">
-        <div className="col-md-1 col-0" />
-        <div className="col-md-10 col-12">{text1}</div>
-        <div className="col-md-1 col-0" />
+      <div className="card transparent">
+        <div className="card-header bg-standard-dark">
+          <strong> {vistenkarteVorne[0].title1}</strong>
+        </div>
+        <div className="card-body bg-standard-light">{text1}</div>
+        <div className="card-footer bg-standard-dark">
+          <em>{vistenkarteVorne[0].footer1}</em>
+        </div>
       </div>
     );
     // text1.push(<h6 className="font-italic">{text}</h6>);
@@ -37,12 +36,6 @@ class Further extends React.Component<{}, {}> {
     const text2 = [];
     const text = [];
 
-    text2.push(
-      <h4 className="font-weight-bold text-left margintop">
-        {vistenkarteVorne[0].title2}{" "}
-      </h4>
-    );
-    text2.push(<br />);
     for (let i = 0; i < vistenkarteVorne[0].services2.length; i++) {
       text2.push(
         <p className="text-left further_text">
@@ -52,10 +45,14 @@ class Further extends React.Component<{}, {}> {
     }
     text2.push(<br />);
     text.push(
-      <div className="row">
-        <div className="col-md-1 col-0" />
-        <div className="col-md-10 col-12">{text2}</div>
-        <div className="col-md-1 col-0" />
+      <div className="card transparent">
+        <div className="card-header bg-standard-dark">
+          <strong> {vistenkarteVorne[0].title2}</strong>
+        </div>
+        <div className="card-body bg-standard-light">{text2}</div>
+        <div className="card-footer bg-standard-dark">
+          <em>{vistenkarteVorne[0].footer2}</em>
+        </div>
       </div>
     );
 
@@ -66,25 +63,50 @@ class Further extends React.Component<{}, {}> {
     const text = [];
     const text3 = [];
 
-    text3.push(
-      <h4 className="font-weight-bold text-left margintop">
-        {vistenkarteHinten[0].title}
-      </h4>
-    );
     text3.push(<br />);
-    for (let i = 0; i < vistenkarteHinten[0].qualifications.length; i++) {
+    for (let i = 0; i < vistenkarteHinten[0].qualifications1.length; i++) {
       text3.push(
         <p className="text-left further_text">
-          {"- " + vistenkarteHinten[0].qualifications[i]}{" "}
+          {"- " + vistenkarteHinten[0].qualifications1[i]}{" "}
         </p>
       );
     }
     text3.push(<br />);
     text.push(
-      <div className="row">
-        <div className="col-md-1 col-0" />
-        <div className="col-md-10 col-12">{text3}</div>
-        <div className="col-md-1 col-0" />
+      <div className="card transparent">
+        <div className="card-header bg-standard-dark">
+          <strong> {vistenkarteHinten[0].title1}</strong>
+        </div>
+        <div className="card-body bg-standard-light">{text3}</div>
+        <div className="card-footer bg-standard-dark">
+          <em>{vistenkarteHinten[0].footer1}</em>
+        </div>
+      </div>
+    );
+    return text;
+  };
+
+  createCarouselText4 = () => {
+    const text = [];
+    const text3 = [];
+
+    for (let i = 0; i < vistenkarteHinten[0].qualifications2.length; i++) {
+      text3.push(
+        <p className="text-left further_text">
+          {"- " + vistenkarteHinten[0].qualifications2[i]}{" "}
+        </p>
+      );
+    }
+    text3.push(<br />);
+    text.push(
+      <div className="card transparent">
+        <div className="card-header bg-standard-dark">
+          <strong> {vistenkarteHinten[0].title2}</strong>
+        </div>
+        <div className="card-body bg-standard-light">{text3}</div>
+        <div className="card-footer bg-standard-dark">
+          <em>{vistenkarteHinten[0].footer2}</em>
+        </div>
       </div>
     );
     return text;
@@ -97,30 +119,28 @@ class Further extends React.Component<{}, {}> {
       <div className="row">
         <div className="col margintop marginbottom">
           <div className="row">
-            <div className="col-md col-1" />
-            <div className="col text-center">
-              <br />
-              <h3 className="cursor-pointer">Sonstiges</h3>
-              <br />
+            <div className="col-lg-1 col-1"></div>
+            <div className="col-lg-5 col-10 xlg_marginbottom xlg_margintop">
+              {this.createCarouselText2()}
             </div>
-            <div className="col-md col-1" />
+            <div className="col-1 d-lg-none"></div>
+            <div className="col-1 d-lg-none"></div>
+            <div className="col-lg-5 col-10 xlg_marginbottom xlg_margintop">
+              {this.createCarouselText1()}
+            </div>
+            <div className="col-lg-1 col-1"></div>
           </div>
-          <div className="row xlg_marginbottom xlg_margintop">
-            <div className="col-2" />
-            <div className="col-8 mmborder">{this.createCarouselText1()}</div>
-            <div className="col-2" />
-          </div>
-
-          <div className="row xlg_marginbottom xlg_margintop">
-            <div className="col-2" />
-            <div className="col-8 mmborder ">{this.createCarouselText2()}</div>
-            <div className="col-2" />
-          </div>
-
-          <div className="row xlg_marginbottom xlg_margintop">
-            <div className="col-2" />
-            <div className="col-8 mmborder">{this.createCarouselText3()}</div>
-            <div className="col-2" />
+          <div className="row">
+            <div className="col-lg-1 col-1"></div>
+            <div className="col-lg-5 col-10 xlg_marginbottom xlg_margintop">
+              {this.createCarouselText3()}
+            </div>
+            <div className="col-1 d-lg-none"></div>
+            <div className="col-1 d-lg-none"></div>
+            <div className="col-lg-5 col-10 xlg_marginbottom xlg_margintop">
+              {this.createCarouselText4()}
+            </div>
+            <div className="col-lg-1 col-1"></div>
           </div>
         </div>
       </div>

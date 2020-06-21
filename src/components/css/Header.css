@@ -1,4 +1,10 @@
+@font-face {
+  font-family: "AFB";
+  src: url(../../AGENCYR.TTF);
+}
+
 .header {
+  font-family: "AFB", arial;
   background-color: rgb(128, 128, 128, 0.95);
   position: fixed;
   z-index: 3;

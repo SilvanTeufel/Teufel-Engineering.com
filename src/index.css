@@ -1,10 +1,10 @@
 @font-face {
-  font-family: "AFB";
-  src: url(AGENCYR.TTF);
+  font-family: "angl";
+  src: url(angltrr.ttf);
 }
 
 body {
-  font-family: "AFB", arial;
+  font-family: "angl", arial;
   /* font-family: "Agency FB", arial;*/
 }
 .heading {
