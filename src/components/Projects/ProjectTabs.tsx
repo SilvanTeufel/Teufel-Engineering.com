@@ -28,7 +28,7 @@ class ProjectTabs extends React.Component<MyComponentProps, MyComponentStates> {
   constructor(props: any) {
     super(props);
     this.state = {
-      interval: setInterval(() => this.nextSlide(true), 15000),
+      interval: setInterval(() => this.togglenextnavlinkto(), 15000),
       showModal: false,
       dataForModal: undefined,
       Projecttitle: "- - -",
@@ -202,42 +202,49 @@ class ProjectTabs extends React.Component<MyComponentProps, MyComponentStates> {
     return indicators;
   };
 
-  nextSlide = (direction: boolean) => {
-    var navlink = this.state.navlink;
-
-    let i = 0;
-    let z = 0;
-    for (var key in navlink) {
-      if (this.state.navlink[key]) {
-        navlink[key] = false;
-        this.setState({ navlink });
-        z = i;
+  togglenextnavlinkto = () => {
+    const navlink = this.state.navlink;
+    let foundlink = false;
+    let setlink = false;
+    for (var Key in this.state.navlink) {
+      if (foundlink) {
+        navlink[Key] = true;
+        foundlink = false;
+        setlink = true;
       }
-      i++;
-    }
-
-    if (z == i - 1 && direction) {
-      z = -1;
-    } else if (z == 0 && !direction) {
-      z = i;
-    }
-
-    i = 0;
-    for (var key in navlink) {
-      if (direction && i == z + 1) {
-        navlink[key] = true;
-        this.setState({ navlink });
-      } else if (!direction && i == z - 1) {
-        navlink[key] = true;
-        this.setState({ navlink });
+      if (this.state.navlink[Key] && !setlink) {
+        navlink[Key] = false;
+        foundlink = true;
       }
-      i++;
     }
+
+    if (!setlink) {
+      navlink["Studium"] = true;
+    }
+
+    this.setState({ navlink });
+  };
+
+  toggleprevlinkto = () => {
+    const navlink = this.state.navlink;
+    let foundlink = false;
+
+    let lastlink = "Studium";
+    for (var Key in this.state.navlink) {
+      if (this.state.navlink[Key] && !foundlink) {
+        navlink[Key] = false;
+        foundlink = true;
+      } else if (!foundlink) {
+        lastlink = Key;
+      }
+    }
+
+    console.log(navlink);
+    navlink[lastlink] = true;
+    this.setState({ navlink });
   };
 
   render() {
-    this.toggleViaNavbar();
-
     return (
       <div
         id="carouselExampleIndicators"
@@ -253,7 +260,7 @@ class ProjectTabs extends React.Component<MyComponentProps, MyComponentStates> {
           <span
             className="carousel-control-prev-icon cursor-pointer"
             aria-hidden="true"
-            onClick={() => this.nextSlide(false)}
+            onClick={() => this.toggleprevlinkto()}
           ></span>
           <span className="sr-only">Previous</span>
         </a>
@@ -261,7 +268,7 @@ class ProjectTabs extends React.Component<MyComponentProps, MyComponentStates> {
           <span
             className="carousel-control-next-icon cursor-pointer"
             aria-hidden="true"
-            onClick={() => this.nextSlide(true)}
+            onClick={() => this.togglenextnavlinkto()}
           ></span>
           <span className="sr-only">Next</span>
         </a>

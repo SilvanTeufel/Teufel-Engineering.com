@@ -14,7 +14,7 @@ class Philosophie extends React.Component<{}, {}> {
     return (
       <div className="row align-items-center margintop marginbottom">
         <div className="col-md"></div>
-        <div className="col-lg-6  col-12 text-left">
+        <div className="col-lg-5 col-md-12  col-12 text-left">
           <h5 className="cursor-pointer-invert">
             Als freiberuflicher Entwickler habe ich Herausforderungen niemals
             gescheut, weshalb ich, sowohl im Hardwarebereich (Entwerfen von
@@ -28,7 +28,7 @@ class Philosophie extends React.Component<{}, {}> {
             freuen mit Ihnen zusammenzuarbeiten.
           </h5>
         </div>
-        <div className="col-lg-5  col-12 radarImage">
+        <div className="col-lg-6 col-md-12 col-12 radarImage">
           <Radar
             data={{
               labels: [

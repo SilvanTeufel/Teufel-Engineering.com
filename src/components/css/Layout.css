@@ -23,7 +23,7 @@
 }
 
 .marginbottom {
-  margin-top: 0.2em;
+  margin-bottom: 0.2em;
 }
 
 .lg_margintop {
@@ -31,7 +31,7 @@
 }
 
 .lg_marginbottom {
-  margin-top: 0.4em;
+  margin-bottom: 0.4em;
 }
 
 .xlg_margintop {
@@ -39,7 +39,7 @@
 }
 
 .xlg_marginbottom {
-  margin-top: 1em;
+  margin-bottom: 1em;
 }
 /*
 p {
@@ -189,4 +189,8 @@ p {
   100% {
     top: 0;
   }
+}
+
+.carousel-indicators {
+  z-index: 1;
 }

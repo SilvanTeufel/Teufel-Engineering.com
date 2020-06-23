@@ -27,10 +27,43 @@ class RouterDropdownField extends React.Component<
     const row = [];
 
     row.push(
-      <div className="dropdown-item first-dropdownelement">
-        <br />
+      <div className="row first-navbarelement text-center">
+        <div className="col-12">
+          <h2 className="cursor-pointer">Teufel Engineering</h2>
+        </div>
       </div>
     );
+
+    row.push(
+      <div className="row navbarelement  text-center">
+        <div className="col-12">
+          <img
+            src={LogoImage}
+            alt=""
+            className="rounded float-left d-none d-lg-block"
+            style={{ maxHeight: 150, marginLeft: "1.5em" }}
+          />
+          <img
+            src={LogoImage}
+            alt=""
+            className="rounded float-left d-lg-none"
+            style={{ maxHeight: 130, marginLeft: "2.5em" }}
+          />
+        </div>
+      </div>
+    );
+
+    row.push(
+      <div className="row last-navbarelement  text-center">
+        <div className="col-12">
+          <h3 className="d-none d-lg-block cursor-pointer">Silvan Teufel</h3>
+          <h3 className="d-none d-lg-block cursor-pointer">
+            Master of Science
+          </h3>
+        </div>
+      </div>
+    );
+
     for (var key in this.props.buttons) {
       row.push(
         <div className="dropdown-item dropdownelement text-left">
@@ -42,8 +75,31 @@ class RouterDropdownField extends React.Component<
     }
 
     row.push(
-      <div className="dropdown-item last-dropdownelement">
-        <br />
+      <div className="row verylast-navbarelement text-center">
+        <div className="col-12">
+          <p className="">Kontaktieren Sie mich: </p>
+          <a
+            className="text-dark margin_mail"
+            href={"mailto:info@teufel-engineering.com"}
+            target="_blank"
+          >
+            <i className="fas fa-envelope-square fa-2x"></i>
+          </a>
+          <a
+            className="text-dark margin_phone"
+            href={"tel:01605170640"}
+            target="_blank"
+          >
+            <i className="fas fa-phone-square fa-2x"></i>
+          </a>
+          <a
+            className="text-dark margin_whatsapp"
+            href={"https://wa.me/01605170640"}
+            target="_blank"
+          >
+            <i className="fab fa-whatsapp-square fa-2x"></i>
+          </a>
+        </div>
       </div>
     );
 
@@ -56,39 +112,30 @@ class RouterDropdownField extends React.Component<
 
     //const menuClass = `dropdown-menu${this.props.DropdownisOpen ? ' show' : ''}`;
     row.push(
-      <div className="dropdown">
+      <div className="dropdown ">
         <div
           className="row align-items-center text-right navbar-icon"
           onClick={this.props.toggleDropDown}
         >
-          <div className="col-md-1 col-3">
-            <i className="fas fa-bars fa-2x" style={{ marginLeft: "1vw" }}></i>
-          </div>
-          <div className="col-md-1 col-1">
-            <i
+          <div className="col-md-1 col-1 navicon">
+            <span
               className={classNames({
-                "fas fa-chevron-left fa-1x": true,
-                rotaterighticondown: this.props.DropdownisOpen,
-                rotaterighticonleft: !this.props.DropdownisOpen,
+                "fa-stack fa-2x d-xl-none": true,
               })}
-              style={{ marginLeft: "2vw" }}
-            ></i>
-            <i
-              className={classNames({
-                "fas fa-chevron-left fa-1x": true,
-                rotaterighticondown: this.props.DropdownisOpen,
-                rotaterighticonleft: !this.props.DropdownisOpen,
-              })}
-              style={{ marginLeft: "2vw" }}
-            ></i>
-            <i
-              className={classNames({
-                "fas fa-chevron-left fa-1x": true,
-                rotaterighticondown: this.props.DropdownisOpen,
-                rotaterighticonleft: !this.props.DropdownisOpen,
-              })}
-              style={{ marginLeft: "2vw" }}
-            ></i>
+              style={{ paddingLeft: "0.25vw", marginTop: "-0.25em" }}
+            >
+              <i
+                className={classNames({
+                  "fas fa-square fa-stack-1x fa-lg": !this.props.DropdownisOpen,
+                })}
+              ></i>
+              <i
+                className={classNames({
+                  "fas fa-bars fa-stack-1x": true,
+                  "fa-inverse": !this.props.DropdownisOpen,
+                })}
+              ></i>
+            </span>
           </div>
         </div>
         <div

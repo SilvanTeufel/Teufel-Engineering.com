@@ -22,7 +22,7 @@
 .boxkit-first {
   border-radius: 0.2em;
   color: black;
-  margin-top: 20vh;
+  margin-top: 7vh;
   margin-bottom: 10vh;
   border: 0.02em solid rgb(46, 45, 45);
 
@@ -59,7 +59,7 @@
   border-radius: 0.2em;
   color: black;
   margin-top: 10vh;
-  margin-bottom: 15vh;
+  margin-bottom: 10vh;
   border: 0.02em solid rgb(46, 45, 45);
 
   background-color: rgba(89, 116, 119, 0.97);

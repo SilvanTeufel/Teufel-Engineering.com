@@ -233,33 +233,39 @@ export default class ProductTabs extends React.Component<
     this.toggleViaNavbar();
 
     return (
-      <div
-        id="carouselExampleIndicators"
-        className="carousel slide"
-        data-ride="carousel"
-        style={{ minHeight: "20vh" }}
-      >
-        <ol className="carousel-indicators">
-          {this.createIndicatorCarousel()}
-        </ol>
-        <div className="carousel-inner">{this.createProjectCarousel()}</div>
-        <a className="carousel-control-prev" role="button" data-slide="prev">
-          <span
-            className="carousel-control-prev-icon cursor-pointer"
-            aria-hidden="true"
-            onClick={() => this.nextSlide(false)}
-          ></span>
-          <span className="sr-only">Previous</span>
-        </a>
-        <a className="carousel-control-next" role="button" data-slide="next">
-          <span
-            className="carousel-control-next-icon cursor-pointer"
-            aria-hidden="true"
-            onClick={() => this.nextSlide(true)}
-          ></span>
-          <span className="sr-only">Next</span>
-        </a>
+      <div className="row">
+        <div className="col fadein">
+          <Product Data={products["Zeiterfassung"]} />
+        </div>
       </div>
+
+      // <div
+      //   id="carouselExampleIndicators"
+      //   className="carousel slide"
+      //   data-ride="carousel"
+      //   style={{ minHeight: "20vh" }}
+      // >
+      //   <ol className="carousel-indicators">
+      //     {this.createIndicatorCarousel()}
+      //   </ol>
+      //   <div className="carousel-inner">{this.createProjectCarousel()}</div>
+      //   <a className="carousel-control-prev" role="button" data-slide="prev">
+      //     <span
+      //       className="carousel-control-prev-icon cursor-pointer"
+      //       aria-hidden="true"
+      //       onClick={() => this.nextSlide(false)}
+      //     ></span>
+      //     <span className="sr-only">Previous</span>
+      //   </a>
+      //   <a className="carousel-control-next" role="button" data-slide="next">
+      //     <span
+      //       className="carousel-control-next-icon cursor-pointer"
+      //       aria-hidden="true"
+      //       onClick={() => this.nextSlide(true)}
+      //     ></span>
+      //     <span className="sr-only">Next</span>
+      //   </a>
+      // </div>
     );
   }
 }

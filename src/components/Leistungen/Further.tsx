@@ -12,16 +12,17 @@ class Further extends React.Component<{}, {}> {
 
     for (let i = 0; i < vistenkarteVorne[0].services1.length; i++) {
       text1.push(
-        <p className="text-left further_text">
-          {"- " + vistenkarteVorne[0].services1[i]}
-        </p>
+        <li className="text-left">{vistenkarteVorne[0].services1[i]}</li>
       );
     }
+
     text1.push(<br />);
     text.push(
       <div className="card transparent">
         <div className="card-header bg-standard-dark">
-          <strong> {vistenkarteVorne[0].title1}</strong>
+          <ul className="list-unstyled text-left">
+            {vistenkarteVorne[0].title1}{" "}
+          </ul>
         </div>
         <div className="card-body bg-standard-light">{text1}</div>
         <div className="card-footer bg-standard-dark">
@@ -38,16 +39,16 @@ class Further extends React.Component<{}, {}> {
 
     for (let i = 0; i < vistenkarteVorne[0].services2.length; i++) {
       text2.push(
-        <p className="text-left further_text">
-          {"- " + vistenkarteVorne[0].services2[i]}
-        </p>
+        <li className="text-left">{vistenkarteVorne[0].services2[i]}</li>
       );
     }
     text2.push(<br />);
     text.push(
       <div className="card transparent">
         <div className="card-header bg-standard-dark">
-          <strong> {vistenkarteVorne[0].title2}</strong>
+          <ul className="list-unstyled text-left">
+            {vistenkarteVorne[0].title2}
+          </ul>
         </div>
         <div className="card-body bg-standard-light">{text2}</div>
         <div className="card-footer bg-standard-dark">
@@ -66,16 +67,18 @@ class Further extends React.Component<{}, {}> {
     text3.push(<br />);
     for (let i = 0; i < vistenkarteHinten[0].qualifications1.length; i++) {
       text3.push(
-        <p className="text-left further_text">
-          {"- " + vistenkarteHinten[0].qualifications1[i]}{" "}
-        </p>
+        <li className="text-left">
+          {vistenkarteHinten[0].qualifications1[i]}{" "}
+        </li>
       );
     }
     text3.push(<br />);
     text.push(
       <div className="card transparent">
         <div className="card-header bg-standard-dark">
-          <strong> {vistenkarteHinten[0].title1}</strong>
+          <ul className="list-unstyled text-left">
+            {vistenkarteHinten[0].title1}
+          </ul>
         </div>
         <div className="card-body bg-standard-light">{text3}</div>
         <div className="card-footer bg-standard-dark">
@@ -92,16 +95,18 @@ class Further extends React.Component<{}, {}> {
 
     for (let i = 0; i < vistenkarteHinten[0].qualifications2.length; i++) {
       text3.push(
-        <p className="text-left further_text">
-          {"- " + vistenkarteHinten[0].qualifications2[i]}{" "}
-        </p>
+        <li className="text-left">
+          {vistenkarteHinten[0].qualifications2[i]}{" "}
+        </li>
       );
     }
     text3.push(<br />);
     text.push(
       <div className="card transparent">
         <div className="card-header bg-standard-dark">
-          <strong> {vistenkarteHinten[0].title2}</strong>
+          <ul className="list-unstyled text-left">
+            {vistenkarteHinten[0].title2}
+          </ul>
         </div>
         <div className="card-body bg-standard-light">{text3}</div>
         <div className="card-footer bg-standard-dark">
