@@ -28,20 +28,23 @@ class RouterDropdownField extends React.Component<
 
     row.push(
       <div className="row first-navbarelement text-center">
-        <div className="col-12">
+        <div className="col-3"></div>
+        <div className="col-6 col-sm-12">
           <h2 className="cursor-pointer">Teufel Engineering</h2>
         </div>
+        <div className="col-3"></div>
       </div>
     );
 
     row.push(
       <div className="row navbarelement  text-center">
-        <div className="col-12">
+        <div className="col-3"></div>
+        <div className="col-6 col-sm-12">
           <img
             src={LogoImage}
             alt=""
             className="rounded float-left d-none d-lg-block"
-            style={{ maxHeight: 150, marginLeft: "1.5em" }}
+            style={{ maxHeight: 130, marginLeft: "2.5em" }}
           />
           <img
             src={LogoImage}
@@ -50,6 +53,7 @@ class RouterDropdownField extends React.Component<
             style={{ maxHeight: 130, marginLeft: "2.5em" }}
           />
         </div>
+        <div className="col-3"></div>
       </div>
     );
 
@@ -68,7 +72,9 @@ class RouterDropdownField extends React.Component<
       row.push(
         <div className="dropdown-item dropdownelement text-left">
           <div className="row">
-            <div className="col-12">{this.props.buttons[key]}</div>
+            <div className="col-3"></div>
+            <div className="col-6 col-sm-12">{this.props.buttons[key]}</div>
+            <div className="col-3"></div>
           </div>
         </div>
       );
@@ -98,6 +104,25 @@ class RouterDropdownField extends React.Component<
             target="_blank"
           >
             <i className="fab fa-whatsapp-square fa-2x"></i>
+          </a>
+        </div>
+      </div>
+    );
+
+    row.push(
+      <div className="row text-light greatmargintop ">
+        <div className="col-6 col-sm-12 text-center align-items-center">
+          <a href={"/#/Impressum"}>
+            <p className="text-dark">
+              <i className="fas fa-stamp"></i> Impressum
+            </p>
+          </a>
+        </div>
+        <div className="col-6 col-sm-12 text-center  align-items-center">
+          <a href={"/#/Datenschutz"}>
+            <p className="text-dark">
+              <i className="fas fa-lock"></i> Datenschutz
+            </p>
           </a>
         </div>
       </div>

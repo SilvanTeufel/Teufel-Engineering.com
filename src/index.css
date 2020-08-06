@@ -3,10 +3,20 @@
   src: url(angltrr.ttf);
 }
 
-body {
-  font-family: "angl", arial;
-  /* font-family: "Agency FB", arial;*/
+@font-face {
+  font-family: "afb";
+  src: url(AGENCYR.TTF);
 }
+
+body {
+  /* font-family: "angl", arial; */
+  /* font-family: "afb", arial; */
+}
+
+h2 {
+  font-family: "afb", arial;
+}
+
 .heading {
   font-weight: 700;
 }

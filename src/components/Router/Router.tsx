@@ -456,10 +456,7 @@ export default class Router extends React.Component<{}, MyComponentState> {
           >
             <div className="row">
               <div className="col-lg-2 col-md-3 col-0"></div>
-              <div className="col">
-                {this.createComponents()}
-                {this.createFooter()}
-              </div>
+              <div className="col">{this.createComponents()}</div>
               <div className="col-lg-1 col-0"></div>
             </div>
           </div>
