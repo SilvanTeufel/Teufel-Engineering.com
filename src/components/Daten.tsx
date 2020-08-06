@@ -170,9 +170,28 @@ export const projects = {
 };
 
 export const products = {
+  TeufelEngineering: {
+    id: 1,
+    title: "www.teufel-engineering.com/",
+    url: "https://teufel-engineering.com/",
+    date: "02/2020 – dato",
+    company: "Teufel-Engineering",
+    activities: ["Unternehmenswebseite", "Hardware und Software"],
+    imagepath: "./Pictures/EX.png",
+  },
+  SelinTeufel: {
+    id: 1,
+    title: "www.selinteufel.de",
+    url: "https://selinteufel.de/#/",
+    date: "02/2020 – dato",
+    company: "Teufel-Engineering",
+    activities: ["Unternehmenswebseite", "Friseursalon"],
+    imagepath: "./Pictures/EX.png",
+  },
   Zeiterfassung: {
     id: 0,
     title: "www.teufel-time-tracking.com",
+    url: "https://teufel-time-tracking.com/#/",
     date: "02/2020 – dato",
     company: "Teufel-Engineering",
     activities: [

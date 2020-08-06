@@ -31,7 +31,7 @@ export default class ProductTabs extends React.Component<
   constructor(props: any) {
     super(props);
     this.state = {
-      interval: setInterval(() => this.nextSlide(true), 15000),
+      interval: setInterval(() => this.togglenextnavlinkto(), 15000),
       showModal: false,
       dataForModal: undefined,
       Projecttitle: "- - -",
@@ -40,6 +40,8 @@ export default class ProductTabs extends React.Component<
       coverflowquantity: 1,
       navlink: {
         Zeiterfassung: true,
+        SelinTeufel: false,
+        TeufelEngineering: false,
       },
       projectTitles: undefined,
       toggleNavbarNow: false,
@@ -76,20 +78,6 @@ export default class ProductTabs extends React.Component<
     }
 
     this.setState({ navlink });
-  };
-
-  toggleViaNavbar = () => {
-    if (this.state.toggleNavbarNow) {
-      //this.togglenavlinkto(this.props.Key[1]);
-      this.setState({ toggleNavbarNow: false });
-      if (
-        this.props.Key[1] === "General" ||
-        this.props.Key[0] === "Applikationen" ||
-        !this.props.Key[1]
-      ) {
-        this.togglenavlinkto("Zeiterfassung");
-      }
-    }
   };
 
   checkQuantity = (screenWidth: number) => {
@@ -194,51 +182,83 @@ export default class ProductTabs extends React.Component<
     return indicators;
   };
 
-  nextSlide = (direction: boolean) => {
-    var setNext = false;
-
-    var navlink = this.state.navlink;
-
-    let i = 0;
-    let z = 0;
-    for (var key in navlink) {
-      if (this.state.navlink[key]) {
-        navlink[key] = false;
-        this.setState({ navlink });
-        z = i;
+  togglenextnavlinkto = () => {
+    const navlink = this.state.navlink;
+    let foundlink = false;
+    let setlink = false;
+    for (var Key in this.state.navlink) {
+      if (foundlink) {
+        navlink[Key] = true;
+        foundlink = false;
+        setlink = true;
       }
-      i++;
-    }
-
-    if (z == i - 1 && direction) {
-      z = -1;
-    } else if (z == 0 && !direction) {
-      z = i;
-    }
-
-    i = 0;
-    for (var key in navlink) {
-      if (direction && i == z + 1) {
-        navlink[key] = true;
-        this.setState({ navlink });
-      } else if (!direction && i == z - 1) {
-        navlink[key] = true;
-        this.setState({ navlink });
+      if (this.state.navlink[Key] && !setlink) {
+        navlink[Key] = false;
+        foundlink = true;
       }
-      i++;
     }
+
+    if (!setlink) {
+      navlink["Zeiterfassung"] = true;
+    }
+
+    this.setState({ navlink });
+  };
+
+  toggleprevlinkto = () => {
+    const navlink = this.state.navlink;
+    let foundlink = false;
+
+    let lastlink = "Zeiterfassung";
+    for (var Key in this.state.navlink) {
+      if (this.state.navlink[Key] && !foundlink) {
+        navlink[Key] = false;
+        foundlink = true;
+      } else if (!foundlink) {
+        lastlink = Key;
+      }
+    }
+
+    console.log(navlink);
+    navlink[lastlink] = true;
+    this.setState({ navlink });
   };
 
   render() {
-    this.toggleViaNavbar();
-
     return (
-      <div className="row">
+      /*<div className="row">
         <div className="col fadein">
           <Product Data={products["Zeiterfassung"]} />
         </div>
-      </div>
+      </div>*/
 
+      <div
+        id="carouselExampleIndicators"
+        className="carousel slide"
+        data-ride="carousel"
+        style={{ minHeight: "25vh" }}
+      >
+        <ol className="carousel-indicators">
+          {this.createIndicatorCarousel()}
+        </ol>
+        <div className="carousel-inner">{this.createProjectCarousel()}</div>
+        <a className="carousel-control-prev" role="button" data-slide="prev">
+          <span
+            className="carousel-control-prev-icon cursor-pointer"
+            aria-hidden="true"
+            onClick={() => this.toggleprevlinkto()}
+          ></span>
+          <span className="sr-only">Previous</span>
+        </a>
+        <a className="carousel-control-next" role="button" data-slide="next">
+          <span
+            className="carousel-control-next-icon cursor-pointer"
+            aria-hidden="true"
+            onClick={() => this.togglenextnavlinkto()}
+          ></span>
+          <span className="sr-only">Next</span>
+        </a>
+      </div>
       // <div
       //   id="carouselExampleIndicators"
       //   className="carousel slide"

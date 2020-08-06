@@ -20,35 +20,44 @@ export default class Product extends React.Component<MyComponentProps, {}> {
     return activities;
   };
 
-  render() {
-    return (
-      <div className="row">
-        <div className="col-md-3"></div>
-        <div className="col">
-          <ul className="list-unstyled text-left">
-            <li>
-              <strong>
-                <a
-                  className="text-dark"
-                  target="_blank"
-                  href="https://teufel-time-tracking.com/#/"
-                >
-                  {this.props.Data.title}
-                </a>
-              </strong>
-            </li>
+  createProduct = () => {
+    const product = [];
 
-            <li style={{ marginBottom: "2vh" }}>
-              {this.props.Data.date + " / " + this.props.Data.company}
-            </li>
+    if (this.props.Data) {
+      product.push(
+        <div className="row">
+          <div className="col-md-3"></div>
+          <div className="col">
+            <ul className="list-unstyled text-left">
+              <li>
+                <strong>
+                  <a
+                    className="text-dark"
+                    target="_blank"
+                    href={this.props.Data.url}
+                  >
+                    {this.props.Data.title}
+                  </a>
+                </strong>
+              </li>
 
-            <li>
-              <ul>{this.createActivities()}</ul>
-            </li>
-          </ul>
+              <li style={{ marginBottom: "2vh" }}>
+                {this.props.Data.date + " / " + this.props.Data.company}
+              </li>
+
+              <li>
+                <ul>{this.createActivities()}</ul>
+              </li>
+            </ul>
+          </div>
+          <div className="col-md-3"></div>
         </div>
-        <div className="col-md-3"></div>
-      </div>
-    );
+      );
+    }
+    return product;
+  };
+
+  render() {
+    return this.createProduct();
   }
 }
