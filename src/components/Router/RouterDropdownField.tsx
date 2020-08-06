@@ -30,7 +30,12 @@ class RouterDropdownField extends React.Component<
       <div className="row first-navbarelement text-center">
         <div className="col-3"></div>
         <div className="col-6 col-sm-12">
-          <h2 className="cursor-pointer">Teufel Engineering</h2>
+          <h2 className="d-none d-lg-block cursor-pointer">
+            Teufel Engineering
+          </h2>
+          <h3 className="d-lg-none d-block cursor-pointer">
+            Teufel Engineering
+          </h3>
         </div>
         <div className="col-3"></div>
       </div>
@@ -50,7 +55,7 @@ class RouterDropdownField extends React.Component<
             src={LogoImage}
             alt=""
             className="rounded float-left d-lg-none"
-            style={{ maxHeight: 130, marginLeft: "2.5em" }}
+            style={{ maxHeight: 100, marginLeft: "2.5em" }}
           />
         </div>
         <div className="col-3"></div>
