@@ -1,7 +1,10 @@
 import * as React from "react";
 import "./App.css";
 import Router from "./components/Router/Router";
+import Background from "./Background";
+//import CameraControls from "camera-controls";
 
+const THREE = require("three-full");
 const background = require("./components/Pictures/background11111111.jpg");
 const { detect } = require("detect-browser");
 const browser = detect();
@@ -18,21 +21,8 @@ class App extends React.Component<{}, {}> {
       );
     } else {
       app.push(
-        <div style={{ backgroundColor: "lightgrey" }}>
-          {
-            <img
-              src={background}
-              alt=""
-              className="rounded float-left"
-              style={{
-                position: "fixed",
-                display: "block",
-                width: "100%",
-                height: "100%"
-              }}
-            />
-          }
-
+        <div>
+          <Background />
           <Router />
         </div>
       );

@@ -13,6 +13,7 @@
     "@types/react-router-dom": "^5.1.5",
     "@types/react-scroll": "^1.5.5",
     "@types/reactstrap": "^8.4.2",
+    "@types/three": "^0.103.2",
     "bootstrap": "^4.5.0",
     "chart.js": "^2.9.3",
     "detect-browser": "^5.1.0",
@@ -23,9 +24,12 @@
     "react-helmet": "^6.0.0",
     "react-responsive-carousel": "^3.1.50",
     "react-router-dom": "^5.2.0",
-    "react-scripts": "^3.4.0",
+    "react-scripts": "^3.4.3",
     "react-scroll": "^1.7.16",
     "reactstrap": "^8.4.1",
+    "three": "^0.119.1",
+    "three-full": "^28.0.2",
+    "three-orbit-controls": "^82.1.0",
     "typescript": "3.9.2"
   },
   "scripts": {

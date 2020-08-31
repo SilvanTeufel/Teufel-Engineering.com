@@ -85,10 +85,10 @@ export default class Router extends React.Component<{}, MyComponentState> {
         },
         icon: {
           Philosophie: {
-            class: "fas fa-yin-yang fa-lg marginIconRight_0",
+            class: "fas fa-yin-yang fa-lg marginIconRight_1",
           },
           Leistungen: {
-            class: "fas fa-sitemap fa-lg marginIconRight_1",
+            class: "fas fa-sitemap fa-lg marginIconRight_2",
           },
           Projekte: {
             class: "fas fa-tasks fa-lg marginIconRight_0",
@@ -97,7 +97,7 @@ export default class Router extends React.Component<{}, MyComponentState> {
             class: "fas fa-paint-brush fa-lg",
           },
           Applikationen: {
-            class: "fas fa-cogs fa-lg marginIconRight_1",
+            class: "fas fa-cogs fa-lg marginIconRight_3",
           },
           Studien: {
             class: "fas fa-sun fa-lg",
@@ -109,7 +109,7 @@ export default class Router extends React.Component<{}, MyComponentState> {
             class: "fas fa-phone fa-lg",
           },
           Kontakt: {
-            class: "fas fa-id-card fa-lg marginIconRight_1",
+            class: "fas fa-id-card fa-lg marginIconRight_4",
           },
           General: {
             class: "fas fa-cut fa-lg",
@@ -322,67 +322,6 @@ export default class Router extends React.Component<{}, MyComponentState> {
             />
           </div>
         </div>
-        // <div className="row align-items-center text-left header">
-        //   <div className="col-lg-2 col-2 align-items-center">
-        //     <RouterDropdownField
-        //       buttons={this.createScrollButtonArray()}
-        //       toggleDropDown={() => this.toggleDropDown()}
-        //       DropdownisOpen={this.state.DropdownisOpen}
-        //       routerstructure={this.state.routerstructure}
-        //     />
-        //   </div>
-        //   <div className="col-lg-1 col-1 d-none d-md-block" />
-        //   <div className="col-lg-2 col-3 text-left">
-        //     <img
-        //       src={LogoImage}
-        //       alt=""
-        //       className="rounded float-left d-none d-lg-block"
-        //       style={{ opacity: 0.8, maxHeight: 150, marginLeft: "7vw" }}
-        //     />
-        //     <img
-        //       src={LogoImage}
-        //       alt=""
-        //       className="rounded float-left d-lg-none"
-        //       style={{ opacity: 0.8, maxHeight: 100 }}
-        //     />
-        //   </div>
-        //   <div className="col-lg-5 col-4 text-left">
-        //     <h1
-        //       className="cursor-pointer d-none d-lg-block"
-        //       style={{ fontSize: "4em" }}
-        //     >
-        //       Teufel Engineering
-        //     </h1>
-        //     <h2 className="cursor-pointer d-lg-none">Teufel Engineering</h2>
-        //     <h3 className="d-none d-lg-block cursor-pointer">
-        //       Silvan Teufel - Master of Science
-        //     </h3>
-        //   </div>
-        //   <div className="col-lg-2 col-1 text-left">
-        //     <p className="d-none d-lg-block">Kontaktieren Sie mich: </p>
-        //     <a
-        //       className="text-dark margin_mail"
-        //       href={"mailto:info@teufel-engineering.com"}
-        //       target="_blank"
-        //     >
-        //       <i className="fas fa-envelope-square fa-2x"></i>
-        //     </a>
-        //     <a
-        //       className="text-dark margin_phone"
-        //       href={"tel:01605170640"}
-        //       target="_blank"
-        //     >
-        //       <i className="fas fa-phone-square fa-2x"></i>
-        //     </a>
-        //     <a
-        //       className="text-dark margin_whatsapp"
-        //       href={"https://wa.me/01605170640"}
-        //       target="_blank"
-        //     >
-        //       <i className="fab fa-whatsapp-square fa-2x"></i>
-        //     </a>
-        //   </div>
-        // </div>
       );
     }
     return header;

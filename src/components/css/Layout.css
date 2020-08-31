@@ -3,7 +3,18 @@
 }
 
 .marginIconRight_1 {
+  margin-right: 0.8em;
+}
+
+.marginIconRight_2 {
   margin-right: 0.5em;
+}
+
+.marginIconRight_3 {
+  margin-right: 0.45em;
+}
+.marginIconRight_4 {
+  margin-right: 0.55em;
 }
 
 .margin_mail {
