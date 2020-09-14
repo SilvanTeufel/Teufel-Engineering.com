@@ -1,7 +1,5 @@
 import * as React from "react";
 import { Collapse } from "reactstrap";
-var classNames = require("classnames");
-const LogoImage = require("../Pictures/LogoINV2.png");
 
 interface MyComponentStates {}
 
