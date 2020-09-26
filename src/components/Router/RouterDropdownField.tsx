@@ -2,7 +2,7 @@ import * as React from "react";
 import "../css/Navbar.css";
 const toggleLine = require("../Pictures/toggleLine2.png");
 var classNames = require("classnames");
-const LogoImage = require("../Pictures/LogoINV2.png");
+const LogoImage = require("../Pictures/LogoOEL.png");
 const LogoImageBlack = require("../Pictures/LogoINV1.png");
 
 interface MyComponentProps {
@@ -27,15 +27,12 @@ class RouterDropdownField extends React.Component<
     const row = [];
 
     row.push(
-      <div className="row first-navbarelement text-center">
+      <div className="row first-navbarelement text-center text-white">
         <div className="col-3"></div>
         <div className="col-6 col-sm-12">
           <h2 className="d-none d-lg-block cursor-pointer">
             Teufel Engineering
           </h2>
-          <h3 className="d-lg-none d-block cursor-pointer">
-            Teufel Engineering
-          </h3>
         </div>
         <div className="col-3"></div>
       </div>
@@ -43,27 +40,33 @@ class RouterDropdownField extends React.Component<
 
     row.push(
       <div className="row navbarelement  text-center">
-        <div className="col-3"></div>
-        <div className="col-6 col-sm-12">
+        <div className="col-2 col-sm-0"></div>
+        <div className="col-8 col-sm-12">
           <img
             src={LogoImage}
             alt=""
             className="rounded float-left d-none d-lg-block"
-            style={{ maxHeight: 130, marginLeft: "2.5em" }}
+            style={{ maxHeight: 150, marginLeft: "2em" }}
           />
           <img
             src={LogoImage}
             alt=""
             className="rounded float-left d-lg-none"
-            style={{ maxHeight: 100, marginLeft: "2.5em" }}
-          />
+            style={{ maxHeight: 80 }}
+          />{" "}
+          <p
+            className="h3 d-lg-none d-block cursor-pointer text-white"
+            style={{ marginTop: "0.8em" }}
+          >
+            Teufel Engineering
+          </p>
         </div>
-        <div className="col-3"></div>
+        <div className="col-2 col-sm-0"></div>
       </div>
     );
 
     row.push(
-      <div className="row last-navbarelement  text-center">
+      <div className="row last-navbarelement  text-center text-white">
         <div className="col-12">
           <h3 className="d-none d-lg-block cursor-pointer">Silvan Teufel</h3>
           <h3 className="d-none d-lg-block cursor-pointer">
@@ -86,25 +89,25 @@ class RouterDropdownField extends React.Component<
     }
 
     row.push(
-      <div className="row verylast-navbarelement text-center">
+      <div className="row verylast-navbarelement text-center text-body">
         <div className="col-12">
           <p className="">Kontaktieren Sie mich: </p>
           <a
-            className="text-dark margin_mail"
+            className="text-body margin_mail"
             href={"mailto:info@teufel-engineering.com"}
             target="_blank"
           >
             <i className="fas fa-envelope-square fa-2x"></i>
           </a>
           <a
-            className="text-dark margin_phone"
+            className="text-body margin_phone"
             href={"tel:01605170640"}
             target="_blank"
           >
             <i className="fas fa-phone-square fa-2x"></i>
           </a>
           <a
-            className="text-dark margin_whatsapp"
+            className="text-body margin_whatsapp"
             href={"https://wa.me/01605170640"}
             target="_blank"
           >
@@ -118,14 +121,14 @@ class RouterDropdownField extends React.Component<
       <div className="row text-light greatmargintop ">
         <div className="col-6 col-sm-12 text-center align-items-center">
           <a href={"/#/Impressum"}>
-            <p className="text-dark">
+            <p className="text-body">
               <i className="fas fa-stamp"></i> Impressum
             </p>
           </a>
         </div>
         <div className="col-6 col-sm-12 text-center  align-items-center">
           <a href={"/#/Datenschutz"}>
-            <p className="text-dark">
+            <p className="text-body">
               <i className="fas fa-lock"></i> Datenschutz
             </p>
           </a>
