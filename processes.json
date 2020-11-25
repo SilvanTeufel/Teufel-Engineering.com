@@ -1,0 +1,33 @@
+{
+  "apps": [
+    {
+      "script": "./backend/server/server.js",
+      "watch": "server",
+      "watch_delay": 1000,
+      "ignore_watch": ["node_modules", "client/img"],
+      "watch_options": {
+        "followSymlinks": false
+      },
+      "instances": "max",
+      "exec_mode": "cluster"
+    },
+    {
+      "script": "http-server ./frontend -S -C ../../etc/letsencrypt/live/teufel-time-tracking.com/fullchain.pem -K ../../etc/letsencrypt/live/teufel-time-tracking.com/privkey.pem -p 443",
+      "watch": "app",
+      "watch_delay": 1000,
+      "ignore_watch": ["node_modules", "client/img"],
+      "watch_options": {
+        "followSymlinks": false
+      }
+    },
+    {
+      "script": "./backend/server/redirect.js",
+      "watch": "redirect",
+      "watch_delay": 1000,
+      "ignore_watch": ["node_modules", "client/img"],
+      "watch_options": {
+        "followSymlinks": false
+      }
+    }
+  ]
+}
