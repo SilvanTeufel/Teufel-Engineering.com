@@ -1,7 +1,7 @@
 import * as React from "react";
 import { renderToString } from "react-dom/server";
 import "./App.css";
-import Home from "./Home";
+import Home from "./components/Home";
 import Kontakt from "./components/Kontakt";
 //import * as THREE from "three";
 
