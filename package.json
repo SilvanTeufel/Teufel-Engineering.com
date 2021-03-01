@@ -27,7 +27,7 @@
     "react-scripts": "^3.4.4",
     "react-scroll": "^1.7.16",
     "reactstrap": "^8.4.1",
-    "three": "^0.119.1",
+    "three": "^0.125.0",
     "three-full": "^28.0.2",
     "three-orbit-controls": "^82.1.0",
     "typescript": "3.9.2"
